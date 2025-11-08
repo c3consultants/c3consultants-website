@@ -28,7 +28,7 @@ const ContactInfo = () => {
     {
       icon: HiLocationMarker,
       title: 'Office',
-      value: 'Patiala, Punjab',
+      value: 'Old Grain Market, Nabha Gate Rd, Patiala',
       subtext: 'India - 147001',
       href: '#location',
       action: 'Get Directions',
@@ -62,7 +62,7 @@ const ContactInfo = () => {
   };
 
   return (
-    <section ref={ref} className="py-10 bg-gradient-to-br from-primary-50 to-neutral-50  overflow-hidden">
+    <section ref={ref} className="section-padding bg-gradient-to-br from-primary-50 to-neutral-50  overflow-hidden">
       <div className="container-custom max-w-2xl lg:max-w-none">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

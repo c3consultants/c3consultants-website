@@ -38,7 +38,7 @@ const MapLocation = () => {
           >
             <div className="relative h-80 md:h-96 lg:h-[500px] rounded-2xl overflow-hidden shadow-xl border-2 border-neutral-200">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d109741.02912911311!2d76.39534885!3d30.33618805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391028a2b8d0b0e1%3A0x5c4a6bdd1e7d6a6a!2sPatiala%2C%20Punjab!5e0!3m2!1sen!2sin!4v1699999999999!5m2!1sen!2sin"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3391.0208826267896!2d76.38956392346888!3d30.328431471540446!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3910294e59f85d59%3A0xa4d4df4643324d4d!2sC3%20Career%20Consultants!5e0!3m2!1sen!2sin!4v1699000000000"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
@@ -62,12 +62,10 @@ const MapLocation = () => {
               <HiLocationMarker className="w-8 h-8 mb-4" />
               <h3 className="text-xl font-bold mb-3">Office Address</h3>
               <p className="text-white/90 leading-relaxed mb-4 text-sm">
-                C3 Career Consultants<br />
-                Patiala, Punjab<br />
-                India - 147001
+               SCO 4, Old Grain Market, Nabha Gate Rd, near Chotti Baradari, Old Anaj Mandi, Bagichi Het Ram, Patiala, Punjab 147001
               </p>
               <a
-                href="https://maps.google.com/?q=Patiala,Punjab"
+                href="https://www.google.com/maps/place/C3+Career+Consultants/@30.3284106,76.3927513,17z/data=!3m1!4b1!4m6!3m5!1s0x3910294e59f85d59:0xa4d4df4643324d4d!8m2!3d30.328406!4d76.3953262!16s%2Fg%2F11rwwb5y17?entry=ttu&g_ep=EgoyMDI1MTEwNC4xIKXMDSoASAFQAw%3D%3D"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block px-6 py-2 bg-white text-primary-600 rounded-lg font-semibold hover:bg-accent-100 transition-colors text-sm"
@@ -77,9 +75,9 @@ const MapLocation = () => {
             </div>
 
             {/* Contact & Office Hours - 2 Column Grid on Mobile */}
-            <div className="grid grid-cols-2 gap-6">
+            <div className="grid gap-4">
               {/* Contact Card */}
-              <div className="bg-white border-2 border-primary-200 rounded-2xl p-6">
+              <div className="bg-white border-2 border-primary-200 rounded-2xl p-3">
                 <HiPhone className="w-8 h-8 text-primary-600 mb-4" />
                 <h3 className="text-lg font-bold text-primary-900 mb-3">Call Us</h3>
                 <a
@@ -94,7 +92,7 @@ const MapLocation = () => {
               </div>
 
               {/* Office Hours Card */}
-              <div className="bg-accent-100 border-2 border-accent-300 rounded-2xl p-6">
+              <div className="bg-accent-100 border-2 border-accent-300 rounded-2xl p-3">
                 <HiClock className="w-8 h-8 text-accent-600 mb-4" />
                 <h3 className="text-lg font-bold text-neutral-900 mb-3">Office Hours</h3>
                 <div className="space-y-2 text-xs">

@@ -1,19 +1,14 @@
 'use client';
 
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
 import { HiChevronLeft, HiChevronRight, HiSparkles, HiCheckCircle } from 'react-icons/hi';
 
 const AchievementCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [autoPlay, setAutoPlay] = useState(true);
-  const [ref, inView] = useInView({
-    threshold: 0.2,
-    triggerOnce: true,
-  });
 
-  const achievements = [
+  const achievements = useMemo(() => [
     {
       id: 1,
       title: 'Rotary Visionary Leadership Award',
@@ -98,15 +93,15 @@ const AchievementCarousel = () => {
         'Club development initiatives',
       ],
     },
-  ];
+  ], []);
 
   const nextSlide = useCallback(() => {
     setCurrentIndex((prev) => (prev + 1) % achievements.length);
-  }, []);
+  }, [achievements.length]);
 
   const prevSlide = useCallback(() => {
     setCurrentIndex((prev) => (prev - 1 + achievements.length) % achievements.length);
-  }, []);
+  }, [achievements.length]);
 
   useEffect(() => {
     if (!autoPlay) return;
@@ -114,76 +109,51 @@ const AchievementCarousel = () => {
     return () => clearInterval(interval);
   }, [autoPlay, nextSlide]);
 
-  const goToSlide = (index) => {
+  const goToSlide = useCallback((index) => {
     setCurrentIndex(index);
     setAutoPlay(false);
-  };
+  }, []);
 
   return (
-    <section ref={ref} className="section-padding bg-gradient-to-br from-primary-900 via-primary-800 to-neutral-900 text-white relative overflow-hidden">
-      {/* Decorative elements */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-accent-500/5 rounded-full blur-3xl -z-0" />
-      <div className="absolute -bottom-32 left-1/4 w-96 h-96 bg-primary-500/5 rounded-full blur-3xl -z-0" />
+    <section className="section-padding bg-gradient-to-br from-primary-900 via-primary-800 to-neutral-900 text-white relative overflow-hidden">
+      {/* Simplified decorative elements - CSS only */}
+      <div className="absolute top-0 right-0 w-96 h-96 bg-accent-500/5 rounded-full blur-3xl animate-pulse-slow" />
+      <div className="absolute -bottom-32 left-1/4 w-96 h-96 bg-primary-500/5 rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: '3s' }} />
 
       <div className="container-custom relative z-10">
-        {/* Section Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-12 md:mb-16 lg:mb-20"
-        >
-          <motion.span
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={inView ? { opacity: 1, scale: 1 } : {}}
-            transition={{ delay: 0.1, duration: 0.4 }}
-            className="inline-flex items-center space-x-2 px-4 py-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-xs md:text-sm font-bold mb-4 shadow-lg"
-          >
+        {/* Section Header - Single animation */}
+        <div className="text-center mb-12 md:mb-16 lg:mb-20">
+          <span className="inline-flex items-center space-x-2 px-4 py-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-xs md:text-sm font-bold mb-4 shadow-lg">
             <HiSparkles className="w-4 h-4" />
             <span>Recognition & Leadership</span>
-          </motion.span>
+          </span>
 
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ delay: 0.15, duration: 0.5 }}
-            className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-white mb-4 leading-tight"
-          >
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-white mb-4 leading-tight">
             Awards & <span className="text-gradient-gold">Achievements</span>
-          </motion.h2>
+          </h2>
 
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ delay: 0.2, duration: 0.5 }}
-            className="text-base md:text-lg text-neutral-300 max-w-3xl mx-auto"
-          >
+          <p className="text-base md:text-lg text-neutral-300 max-w-3xl mx-auto">
             A journey of excellence, visionary leadership, and unwavering commitment to community service spanning over two decades
-          </motion.p>
-        </motion.div>
+          </p>
+        </div>
 
-        {/* Carousel */}
+        {/* Carousel - Optimized transitions */}
         <div className="relative w-full">
           <AnimatePresence mode="wait">
             <motion.div
               key={currentIndex}
-              initial={{ opacity: 0, x: 100 }}
+              initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -100 }}
-              transition={{ duration: 0.5 }}
+              exit={{ opacity: 0, x: -50 }}
+              transition={{ duration: 0.3, ease: 'easeInOut' }}
               className="w-full"
             >
-              {/* Grid Layout - Responsive */}
+              {/* Grid Layout */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
                 {/* Image Section */}
-                <motion.div
-                  initial={{ scale: 0.9, opacity: 0 }}
-                  animate={{ scale: 1, opacity: 1 }}
-                  transition={{ delay: 0.2, duration: 0.4 }}
-                  className="relative rounded-2xl overflow-hidden shadow-2xl h-56 sm:h-64 md:h-80 lg:h-96"
-                >
+                <div className="relative rounded-2xl overflow-hidden shadow-2xl h-56 sm:h-64 md:h-80 lg:h-96">
                   <div
-                    className="absolute inset-0 bg-cover bg-center"
+                    className="absolute inset-0 bg-cover bg-center will-change-transform"
                     style={{
                       backgroundImage: `url(${achievements[currentIndex].image})`,
                     }}
@@ -191,84 +161,46 @@ const AchievementCarousel = () => {
                     <div className="absolute inset-0 bg-gradient-to-t from-primary-900/90 via-primary-900/50 to-primary-600/20" />
                   </div>
 
-                  {/* Year Badge on Image */}
-                  <motion.div
-                    initial={{ scale: 0, y: -20 }}
-                    animate={{ scale: 1, y: 0 }}
-                    transition={{ delay: 0.3, duration: 0.4 }}
-                    className="absolute top-4 left-4 px-3 py-1.5 md:px-4 md:py-2 bg-white/95 backdrop-blur-md rounded-lg shadow-xl"
-                  >
+                  {/* Year Badge */}
+                  <div className="absolute bottom-4 left-4 px-3 py-1.5 md:px-4 md:py-2 bg-white/95 backdrop-blur-md rounded-lg shadow-xl">
                     <span className="font-bold text-primary-600 text-xs md:text-sm">
                       {achievements[currentIndex].year}
                     </span>
-                  </motion.div>
+                  </div>
 
                   {/* Category Badge */}
-                  <motion.div
-                    initial={{ scale: 0, y: -20 }}
-                    animate={{ scale: 1, y: 0 }}
-                    transition={{ delay: 0.35, duration: 0.4 }}
-                    className="absolute top-4 right-4 px-2 py-1 md:px-3 md:py-1.5 bg-accent-500 text-neutral-900 rounded-full text-xs font-bold shadow-lg"
-                  >
+                  <div className="absolute bottom-4 right-4 px-2 py-1 md:px-3 md:py-1.5 bg-accent-500 text-neutral-900 rounded-full text-xs font-bold shadow-lg">
                     {achievements[currentIndex].category}
-                  </motion.div>
-
-                  {/* Shine effect */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300" />
-                </motion.div>
+                  </div>
+                </div>
 
                 {/* Content Section */}
-                <motion.div
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.2, duration: 0.4 }}
-                  className="flex flex-col justify-start md:justify-center space-y-4"
-                >
+                <div className="flex flex-col justify-start md:justify-center space-y-4">
                   {/* Title Section */}
                   <div className="space-y-2 md:space-y-3">
-                    <motion.p
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      transition={{ delay: 0.3, duration: 0.4 }}
-                      className="text-accent-400 text-xs md:text-sm font-bold uppercase tracking-widest"
-                    >
+                    <p className="text-accent-400 text-xs md:text-sm font-bold uppercase tracking-widest">
                       {achievements[currentIndex].subtitle}
-                    </motion.p>
+                    </p>
 
-                    <motion.h3
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: 0.35, duration: 0.4 }}
-                      className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-serif font-bold leading-tight"
-                    >
+                    <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-serif font-bold leading-tight">
                       {achievements[currentIndex].title}
-                    </motion.h3>
+                    </h3>
                   </div>
 
                   {/* Description */}
-                  <motion.p
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.4, duration: 0.4 }}
-                    className="text-sm md:text-base lg:text-lg text-neutral-200 leading-relaxed"
-                  >
+                  <p className="text-sm md:text-base lg:text-lg text-neutral-200 leading-relaxed">
                     {achievements[currentIndex].description}
-                  </motion.p>
+                  </p>
 
                   {/* Highlights List */}
-                  <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ delay: 0.45, duration: 0.4 }}
-                    className="space-y-2 pt-3"
-                  >
+                  <div className="space-y-2 pt-3">
                     {achievements[currentIndex].highlights.map((highlight, idx) => (
                       <div key={idx} className="flex items-start space-x-2">
                         <HiCheckCircle className="w-4 h-4 md:w-5 md:h-5 text-accent-400 flex-shrink-0 mt-0.5" />
                         <span className="text-xs md:text-sm lg:text-base text-neutral-200">{highlight}</span>
                       </div>
                     ))}
-                  </motion.div>
+                  </div>
 
                   {/* Progress Indicators */}
                   <div className="pt-4 md:pt-6 border-t border-white/30">
@@ -277,10 +209,8 @@ const AchievementCarousel = () => {
                     </p>
                     <div className="flex items-center justify-center space-x-2 flex-wrap gap-2">
                       {achievements.map((_, index) => (
-                        <motion.button
+                        <button
                           key={index}
-                          whileHover={{ scale: 1.2 }}
-                          whileTap={{ scale: 0.95 }}
                           onClick={() => goToSlide(index)}
                           className={`transition-all duration-300 rounded-full ${
                             currentIndex === index
@@ -292,14 +222,12 @@ const AchievementCarousel = () => {
                       ))}
                     </div>
                   </div>
-                </motion.div>
+                </div>
               </div>
 
-              {/* Navigation Buttons */}
+              {/* Mobile Navigation */}
               <div className="absolute top-1/3 -translate-y-1/2 left-0 right-0 flex justify-between pointer-events-none md:hidden px-2">
-                <motion.button
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.9 }}
+                <button
                   onClick={prevSlide}
                   onMouseEnter={() => setAutoPlay(false)}
                   onMouseLeave={() => setAutoPlay(true)}
@@ -307,11 +235,9 @@ const AchievementCarousel = () => {
                   aria-label="Previous achievement"
                 >
                   <HiChevronLeft className="w-5 h-5" />
-                </motion.button>
+                </button>
 
-                <motion.button
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.9 }}
+                <button
                   onClick={nextSlide}
                   onMouseEnter={() => setAutoPlay(false)}
                   onMouseLeave={() => setAutoPlay(true)}
@@ -319,34 +245,30 @@ const AchievementCarousel = () => {
                   aria-label="Next achievement"
                 >
                   <HiChevronRight className="w-5 h-5" />
-                </motion.button>
+                </button>
               </div>
 
-              {/* Desktop Navigation Buttons */}
+              {/* Desktop Navigation */}
               <div className="hidden md:flex absolute top-1/2 -translate-y-1/2 left-0 right-0 pointer-events-none justify-between px-0">
-                <motion.button
-                  whileHover={{ scale: 1.15, x: -4 }}
-                  whileTap={{ scale: 0.9 }}
+                <button
                   onClick={prevSlide}
                   onMouseEnter={() => setAutoPlay(false)}
                   onMouseLeave={() => setAutoPlay(true)}
-                  className="pointer-events-auto -ml-8 p-3 md:p-4 bg-gradient-to-br from-white/20 to-white/10 backdrop-blur-md hover:from-white/30 hover:to-white/20 border border-white/20 hover:border-accent-400/50 rounded-full transition-all duration-300 shadow-lg text-white"
+                  className="pointer-events-auto -ml-8 p-3 md:p-4 bg-gradient-to-br from-white/20 to-white/10 backdrop-blur-md hover:from-white/30 hover:to-white/20 border border-white/20 hover:border-accent-400/50 rounded-full transition-all duration-300 shadow-lg text-white hover:scale-110"
                   aria-label="Previous achievement"
                 >
-                  <HiChevronLeft className="w-4 h-4" />
-                </motion.button>
+                  <HiChevronLeft className="w-5 h-5" />
+                </button>
 
-                <motion.button
-                  whileHover={{ scale: 1.15, x: 4 }}
-                  whileTap={{ scale: 0.9 }}
+                <button
                   onClick={nextSlide}
                   onMouseEnter={() => setAutoPlay(false)}
                   onMouseLeave={() => setAutoPlay(true)}
-                  className="pointer-events-auto -mr-8 p-3 md:p-4 bg-gradient-to-br from-white/20 to-white/10 backdrop-blur-md hover:from-white/30 hover:to-white/20 border border-white/20 hover:border-accent-400/50 rounded-full transition-all duration-300 shadow-lg text-white"
+                  className="pointer-events-auto -mr-8 p-3 md:p-4 bg-gradient-to-br from-white/20 to-white/10 backdrop-blur-md hover:from-white/30 hover:to-white/20 border border-white/20 hover:border-accent-400/50 rounded-full transition-all duration-300 shadow-lg text-white hover:scale-110"
                   aria-label="Next achievement"
                 >
-                  <HiChevronRight className="w-4 h-4" />
-                </motion.button>
+                  <HiChevronRight className="w-5 h-5" />
+                </button>
               </div>
             </motion.div>
           </AnimatePresence>

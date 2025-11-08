@@ -73,7 +73,7 @@ const ServicesSection = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-12 md:mb-16 lg:mb-20"
+          className="text-center mb-10"
         >
           <motion.span
             initial={{ opacity: 0, scale: 0.9 }}
@@ -120,7 +120,7 @@ const ServicesSection = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ delay: 0.6, duration: 0.6 }}
-          className="text-center mt-12 md:mt-16 lg:mt-20"
+          className="text-center mt-10"
         >
           <p className="text-neutral-700 mb-6 text-base md:text-lg">
             Not sure which service is right for you?

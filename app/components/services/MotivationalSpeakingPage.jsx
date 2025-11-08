@@ -19,7 +19,8 @@ import {
   HiShieldCheck,
   HiChatAlt2,
   HiChevronLeft,
-  HiChevronRight
+  HiChevronRight,
+  HiClock
 } from 'react-icons/hi';
 import Link from 'next/link';
 import CTASection from '../CTASection';
@@ -92,10 +93,9 @@ const MotivationalSpeakingPage = () => {
     { title: 'The Power of Positive Thinking', icon: HiLightBulb },
     { title: 'Overcoming Fear and Self-Doubt', icon: HiShieldCheck },
     { title: 'Building Unshakeable Confidence', icon: HiTrendingUp },
-    { title: 'Goal Setting and Achievement', icon: HiCheckCircle },
     { title: 'Leadership in the Modern World', icon: HiUsers },
     { title: 'Effective Communication Skills', icon: HiChatAlt2 },
-    { title: 'Time Management Mastery', icon: HiLightningBolt },
+    { title: 'Time Management Mastery', icon: HiClock },
     { title: 'Dealing with Failure and Rejection', icon: HiHeart },
   ];
 
@@ -199,7 +199,7 @@ const MotivationalSpeakingPage = () => {
           className="absolute top-1/4 right-1/4 w-96 h-96 bg-accent-500 rounded-full blur-3xl"
         />
         
-        <div className="container-custom relative z-10 py-20">
+        <div className="container-custom relative z-10 pt-20 pb-10">
           <div className="max-w-5xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -226,7 +226,7 @@ const MotivationalSpeakingPage = () => {
               </p>
 
               {/* Stats Grid */}
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
                 {stats.map((stat, index) => {
                   const Icon = stat.icon;
                   return (
@@ -263,7 +263,7 @@ const MotivationalSpeakingPage = () => {
                   href="tel:+919781312020"
                   className="inline-flex items-center justify-center space-x-2 px-7 py-3 bg-white/10 backdrop-blur-md border-2 border-white text-white hover:bg-white hover:text-primary-600 font-bold rounded-xl transition-all duration-300"
                 >
-                  <span className="text-lg">Call: 9781312020</span>
+                  <span className="text-lg">Call: +91 9781312020</span>
                 </a>
               </motion.div>
             </motion.div>
@@ -279,7 +279,7 @@ const MotivationalSpeakingPage = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-16"
+            className="text-center mb-8"
           >
             <span className="inline-block px-4 py-2 bg-primary-100 text-primary-600 rounded-full text-sm font-bold mb-4">
               Our Impact
@@ -304,8 +304,8 @@ const MotivationalSpeakingPage = () => {
                   transition={{ delay: index * 0.1, duration: 0.5 }}
                   className="group"
                 >
-                  <div className="bg-gradient-to-br from-neutral-50 to-white rounded-2xl border-2 border-neutral-200 group-hover:border-primary-500 p-8 text-center transition-all hover:shadow-xl h-full">
-                    <div className="w-16 h-16 bg-gradient-to-br from-primary-500 to-accent-500 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform shadow-lg">
+                  <div className="bg-gradient-to-br from-neutral-50 to-white rounded-2xl border-2 border-neutral-200 group-hover:border-primary-500 p-4 text-center transition-all hover:shadow-xl h-full">
+                    <div className="w-12 h-12 bg-gradient-to-br from-primary-500 to-accent-500 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform shadow-lg">
                       <Icon className="w-8 h-8 text-white" />
                     </div>
                     <h3 className="text-xl font-bold text-primary-900 mb-3">{area.title}</h3>
@@ -325,7 +325,7 @@ const MotivationalSpeakingPage = () => {
       initial={{ opacity: 0, y: 30 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.6 }}
-      className="text-center mb-10"
+      className="text-center mb-8"
     >
       <span className="inline-block px-4 py-2 bg-primary-100 text-primary-600 rounded-full text-sm font-bold mb-4">
         What We Offer
@@ -351,13 +351,13 @@ const MotivationalSpeakingPage = () => {
             transition={{ duration: 0.5 }}
             className="w-full"
           >
-            <div className={`bg-gradient-to-br ${services[selectedService].color} rounded-2xl md:rounded-3xl p-6 text-white shadow-2xl`}>
+            <div className={`bg-gradient-to-br ${services[selectedService].color} rounded-2xl md:rounded-3xl p-4 text-white shadow-2xl`}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
                 {/* Left Column - Content */}
                 <div className="flex flex-col">
                   {(() => {
                     const Icon = services[selectedService].icon;
-                    return <Icon className="w-12 h-12 mb-4 " />;
+                    return <Icon className="w-10 h-10 mb-2 " />;
                   })()}
                   
                   <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-3 md:mb-4">
@@ -481,7 +481,7 @@ const MotivationalSpeakingPage = () => {
       {/* Popular Topics Section */}
       <section className="pb-10 bg-white">
         <div className="container-custom">
-          <div className="text-center mb-10">
+          <div className="text-center mb-8">
             <span className="inline-block px-4 py-2 bg-primary-100 text-primary-600 rounded-full text-sm font-bold mb-4">
               Session Themes
             </span>
@@ -503,10 +503,10 @@ const MotivationalSpeakingPage = () => {
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.05, duration: 0.3 }}
-                  className="group bg-white border-2 border-neutral-200 hover:border-primary-500 rounded-xl p-6 hover:shadow-xl transition-all flex flex-col justify-center items-center"
+                  className="group bg-white border-2 border-neutral-200 hover:border-primary-500 rounded-xl p-4 hover:shadow-xl transition-all flex flex-col justify-center items-center"
                 >
-                  <Icon className="w-8 h-8 text-primary-600 mb-4 group-hover:scale-110 transition-transform" />
-                  <p className="text-primary-900 font-bold group-hover:text-primary-600 transition-colors">
+                  <Icon className="w-8 h-8 text-primary-600 mb-2 group-hover:scale-110 transition-transform" />
+                  <p className="text-primary-900 text-center font-bold group-hover:text-primary-600 transition-colors">
                     {topic.title}
                   </p>
                 </motion.div>
@@ -526,7 +526,7 @@ const MotivationalSpeakingPage = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-10"
+            className="text-center mb-8"
           >
             <span className="inline-block px-4 py-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-accent-300 text-sm font-bold mb-4">
               Success Stories
@@ -547,7 +547,7 @@ const MotivationalSpeakingPage = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1, duration: 0.5 }}
-                className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-8 hover:bg-white/20 transition-all"
+                className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-4 hover:bg-white/20 transition-all"
               >
                 {/* Rating */}
                 <div className="flex space-x-1 mb-4">
@@ -579,7 +579,7 @@ const MotivationalSpeakingPage = () => {
             transition={{ delay: 0.4, duration: 0.6 }}
             className="text-center mt-10"
           >
-            <div className="inline-flex items-center space-x-4 px-8 py-4 bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl">
+            <div className="inline-flex items-center space-x-4 px-7 py-3 bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl">
               <HiSparkles className="w-10 h-10 text-accent-300" />
               <div className="text-left">
                 <p className="text-white font-bold text-lg">Join 10,000+ Transformed Lives</p>

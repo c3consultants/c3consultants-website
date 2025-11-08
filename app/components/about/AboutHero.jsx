@@ -5,7 +5,7 @@ import { HiArrowRight } from 'react-icons/hi';
 
 const AboutHero = () => {
   return (
-    <section className="relative w-full pt-20 pb-16 bg-gradient-to-br from-primary-900 via-primary-800 to-neutral-900 overflow-hidden">
+    <section className="relative w-full pt-20 pb-10 bg-gradient-to-br from-primary-900 via-primary-800 to-neutral-900 overflow-hidden">
       {/* Decorative elements */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-accent-500/10 rounded-full blur-3xl -z-0" />
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-primary-500/10 rounded-full blur-3xl -z-0" />
@@ -68,7 +68,7 @@ const AboutHero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.6 }}
-            className="pt-8 md:pt-12 border-t border-white/20 flex justify-center gap-8 md:gap-16"
+            className="pt-8 border-t border-white/20 flex justify-center gap-8 md:gap-16"
           >
             {[
               { number: '23+', label: 'Years' },

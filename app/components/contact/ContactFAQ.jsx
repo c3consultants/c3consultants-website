@@ -72,7 +72,7 @@ const ContactFAQ = () => {
                 onClick={() => setOpenIndex(openIndex === index ? -1 : index)}
                 className="w-full flex items-center justify-between p-6 text-left hover:bg-neutral-50 transition-colors"
               >
-                <span className="font-bold text-primary-900 text-lg pr-4">
+                <span className="font-bold text-primary-900 text-sm md:text-md pr-4">
                   {faq.question}
                 </span>
                 <motion.div
@@ -93,7 +93,7 @@ const ContactFAQ = () => {
                     transition={{ duration: 0.3 }}
                     className="overflow-hidden"
                   >
-                    <div className="px-6 py-4 text-neutral-600 leading-relaxed">
+                    <div className="px-6 py-4 text-sm md:text-md text-neutral-600 leading-relaxed">
                       {faq.answer}
                     </div>
                   </motion.div>
@@ -108,12 +108,12 @@ const ContactFAQ = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ delay: 0.6, duration: 0.6 }}
-          className="mt-10 text-center"
+          className="mt-8 text-center"
         >
           <p className="text-neutral-600 mb-4">Still have questions?</p>
           <a
             href="tel:+919781312020"
-            className="inline-block px-8 py-3 bg-primary-600 hover:bg-primary-700 text-white font-bold rounded-lg transition-colors shadow-lg"
+            className="inline-block px-7 py-3 bg-primary-600 hover:bg-primary-700 text-white font-bold rounded-lg transition-colors shadow-lg"
           >
             Call Us: +91 9781312020
           </a>

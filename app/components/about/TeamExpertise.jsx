@@ -177,7 +177,7 @@ const TeamExpertise = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ delay: 0.6, duration: 0.6 }}
-          className="text-center mt-10"
+          className="text-center mt-8"
         >
           <p className="text-neutral-700 mb-4 text-base md:text-lg">
             Ready to start your transformation journey?

@@ -41,10 +41,6 @@
     @apply py-10;
   }
   
-  .section-padding-sm {
-    @apply py-12 md:py-16 lg:py-20;
-  }
-  
   .heading-xl {
     @apply text-4xl md:text-5xl lg:text-6xl font-bold text-primary-900 leading-tight;
   }
@@ -72,21 +68,6 @@
   .card-hover {
     @apply transition-all duration-300 hover:shadow-lg-gold hover:-translate-y-2;
   }
-  
-  .bg-pattern {
-    background-image: 
-      radial-gradient(circle at 20% 50%, rgba(34, 35, 68, 0.05) 0%, transparent 50%),
-      radial-gradient(circle at 80% 80%, rgba(205, 173, 125, 0.05) 0%, transparent 50%);
-  }
-  
-  .section-divider {
-    @apply relative;
-  }
-  
-  .section-divider::before {
-    content: '';
-    @apply absolute top-0 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-primary-500 to-accent-500 rounded-full;
-  }
 }
 
 @layer utilities {
@@ -104,49 +85,116 @@
   .text-balance {
     text-wrap: balance;
   }
+  
+  .overflow-wrap-anywhere {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
 }
 
-/* Custom Sleek Scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: #f4f1ec;
-  border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #222344 0%, #cdad7d 100%);
-  border-radius: 10px;
-  transition: background 0.3s ease;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #151629 0%, #b89a6a 100%);
-  box-shadow: 0 0 10px rgba(205, 173, 125, 0.3);
-}
-
-/* Firefox Scrollbar */
-* {
-  scrollbar-width: thin;
-  scrollbar-color: #222344 #f4f1ec;
-}
-/* Prevent horizontal scroll globally */
+/* Prevent horizontal scroll */
 html, body {
   overflow-x: hidden;
   max-width: 100vw;
 }
 
-/* Ensure all sections respect viewport width */
 section {
   overflow-x: hidden;
   max-width: 100%;
 }
 
-/* Word breaking for long emails/URLs */
-.overflow-wrap-anywhere {
-  overflow-wrap: anywhere;
-  word-break: break-word;
+/* Modern Transparent Scrollbar - Deep Blue */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #222344 0%, #1b1c36 50%, #151629 100%);
+  border-radius: 10px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #1b1c36 0%, #151629 50%, #0e0f1b 100%);
+  box-shadow: 0 0 15px rgba(34, 35, 68, 0.4);
+  border: 2px solid rgba(205, 173, 125, 0.3);
+}
+
+/* Firefox Scrollbar - Transparent track */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #222344 transparent;
+}
+
+/* Smooth pulse animation */
+@keyframes pulse-slow {
+  0%, 100% {
+    opacity: 0.2;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.3;
+    transform: scale(1.05);
+  }
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 8s ease-in-out infinite;
+}
+
+/* Performance optimizations */
+.will-change-transform {
+  will-change: transform;
+}
+
+.will-change-opacity {
+  will-change: opacity;
+}
+
+/* Smooth transitions for interactive elements */
+a, button {
+  transition: all 0.3s ease;
+}
+
+/* Focus styles for accessibility */
+a:focus-visible, 
+button:focus-visible {
+  outline: 2px solid #cdad7d;
+  outline-offset: 2px;
+}
+
+/* Selection styling */
+::selection {
+  background-color: #cdad7d;
+  color: #222344;
+}
+
+::-moz-selection {
+  background-color: #cdad7d;
+  color: #222344;
+}
+
+/* Loading state */
+.loading {
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

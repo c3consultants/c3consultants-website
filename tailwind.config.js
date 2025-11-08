@@ -2,7 +2,6 @@
 module.exports = {
   content: [
     './app/**/*.{js,ts,jsx,tsx,mdx}',
-    './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
@@ -46,9 +45,8 @@ module.exports = {
         },
       },
       fontFamily: {
-        serif: ['Playfair Display', 'serif'],
-        sans: ['Inter', 'sans-serif'],
-        accent: ['Montserrat', 'sans-serif'],
+        serif: ['var(--font-playfair)', 'Playfair Display', 'serif'],
+        sans: ['var(--font-inter)', 'Inter', 'sans-serif'],
       },
       spacing: {
         '128': '32rem',
@@ -59,6 +57,7 @@ module.exports = {
         'fade-in': 'fadeIn 0.8s ease-out',
         'float': 'float 3s ease-in-out infinite',
         'slide-up': 'slideUp 0.6s ease-out',
+        'pulse-slow': 'pulse 8s ease-in-out infinite',
       },
       keyframes: {
         fadeInUp: {
@@ -70,12 +69,16 @@ module.exports = {
           '100%': { opacity: '1' },
         },
         float: {
-          '0%, 100%': { transform: 'translateY(0px)' },
+          '0%, 100%': { transform: 'translateY(0)' },
           '50%': { transform: 'translateY(-10px)' },
         },
         slideUp: {
           '0%': { transform: 'translateY(30px)', opacity: '0' },
           '100%': { transform: 'translateY(0)', opacity: '1' },
+        },
+        pulse: {
+          '0%, 100%': { opacity: '0.2', transform: 'scale(1)' },
+          '50%': { opacity: '0.3', transform: 'scale(1.05)' },
         },
       },
       boxShadow: {
@@ -91,6 +94,7 @@ module.exports = {
       backgroundImage: {
         'gradient-hero': 'linear-gradient(135deg, #222344 0%, #151629 100%)',
         'gradient-navy-gold': 'linear-gradient(135deg, #222344 0%, #151629 50%, #cdad7d 100%)',
+        'gradient-gold': 'linear-gradient(135deg, #cdad7d 0%, #d9c19f 100%)',
       },
     },
   },

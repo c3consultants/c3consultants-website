@@ -265,7 +265,7 @@ const HeroCarousel = () => {
                       href="/contact"
                       className="w-full sm:w-auto px-6 py-3 lg:px-7 lg:py-3.5 bg-white/10 backdrop-blur-md border-2 border-white text-white rounded-lg font-bold text-sm md:text-base hover:bg-white hover:text-primary-600 transition-all duration-300 shadow-xl text-center"
                     >
-                      Get Free Consultation
+                      Get Consultation
                     </Link>
                   </motion.div>
 

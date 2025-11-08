@@ -273,16 +273,16 @@ const CareerCounsellingPage = () => {
               >
                 <Link
                   href="/contact"
-                  className="group inline-flex items-center justify-center space-x-2 px-8 py-3 bg-accent-500 hover:bg-accent-600 text-white font-bold rounded-xl transition-all duration-300 shadow-2xl hover:shadow-accent-500/50 transform hover:scale-105"
+                  className="group inline-flex items-center justify-center space-x-2 px-7 py-3 bg-accent-500 hover:bg-accent-600 text-white font-bold rounded-xl transition-all duration-300 shadow-2xl hover:shadow-accent-500/50 transform hover:scale-105"
                 >
-                  <span className="text-lg">Book Free Consultation</span>
+                  <span className="text-lg">Book Consultation</span>
                   <HiArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <a
                   href="tel:+919781312020"
-                  className="inline-flex items-center justify-center space-x-2 px-8 py-3 bg-white/10 backdrop-blur-md border-2 border-white text-white hover:bg-white hover:text-primary-600 font-bold rounded-xl transition-all duration-300"
+                  className="inline-flex items-center justify-center space-x-2 px-7 py-3 bg-white/10 backdrop-blur-md border-2 border-white text-white hover:bg-white hover:text-primary-600 font-bold rounded-xl transition-all duration-300"
                 >
-                  <span className="text-lg">Call: 9781312020</span>
+                  <span className="text-lg">Call: +91 9781312020</span>
                 </a>
               </motion.div>
             </motion.div>
@@ -298,7 +298,7 @@ const CareerCounsellingPage = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-16"
+            className="text-center mb-8"
           >
             <span className="inline-block px-4 py-2 bg-primary-100 text-primary-600 rounded-full text-sm font-bold mb-4">
               Our Work
@@ -362,10 +362,10 @@ const CareerCounsellingPage = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.3, duration: 0.6 }}
-            className="mt-12 flex justify-center"
+            className="mt-10 flex justify-center"
           >
             <div className="inline-flex items-center space-x-3 px-8 py-4 bg-gradient-to-r from-primary-100 to-accent-100 rounded-2xl border-2 border-primary-200">
-              <HiCheckCircle className="w-6 h-6 text-primary-600" />
+              <HiCheckCircle className="w-7 h-7 text-primary-600" />
               <p className="text-primary-900 font-bold text-lg">
                 Trusted by 50+ Schools & Colleges across Punjab
               </p>
@@ -433,7 +433,7 @@ const CareerCounsellingPage = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6 }}
-            className="text-center mb-10"
+            className="text-center mb-8"
           >
             <span className="inline-block px-4 py-2 bg-primary-100 text-primary-600 rounded-full text-sm font-bold mb-4">
               What We Offer
@@ -458,9 +458,9 @@ const CareerCounsellingPage = () => {
                   transition={{ delay: index * 0.1, duration: 0.5 }}
                   className="group relative"
                 >
-                  <div className="relative bg-white rounded-2xl border-2 border-neutral-200 group-hover:border-primary-500 p-6 transition-all duration-300 hover:shadow-2xl h-full">
-                    <div className="w-16 h-16 bg-gradient-to-br from-primary-500 to-accent-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-lg">
-                      <Icon className="w-8 h-8 text-white" />
+                  <div className="relative bg-white rounded-2xl border-2 border-neutral-200 group-hover:border-primary-500 p-4 transition-all duration-300 hover:shadow-2xl h-full">
+                    <div className="w-12 h-12 bg-gradient-to-br from-primary-500 to-accent-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-lg">
+                      <Icon className="w-6 h-6 text-white" />
                     </div>
 
                     <h3 className="text-2xl font-bold text-primary-900 mb-3 group-hover:text-primary-600 transition-colors">
@@ -559,7 +559,7 @@ const CareerCounsellingPage = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-10"
+            className="text-center mb-8"
           >
             <span className="inline-block px-4 py-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-accent-300 text-sm font-bold mb-4">
               The Difference We Make
@@ -584,7 +584,7 @@ const CareerCounsellingPage = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.05, duration: 0.4 }}
-                  className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 hover:bg-white/20 transition-all group"
+                  className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-4 hover:bg-white/20 transition-all group"
                 >
                   <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center mb-4 group-hover:bg-accent-500 transition-all">
                     <Icon className="w-6 h-6 text-white" />

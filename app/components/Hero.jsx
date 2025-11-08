@@ -1,12 +1,14 @@
-'use client'
-import { motion } from 'framer-motion'
-import { FaPhone, FaWhatsapp, FaLinkedin, FaFacebook } from 'react-icons/fa'
-import Image from 'next/image'
+'use client';
 
-export default function Hero() {
+import { memo } from 'react';
+import { motion } from 'framer-motion';
+import { FaPhone, FaWhatsapp, FaLinkedin, FaFacebook } from 'react-icons/fa';
+import Image from 'next/image';
+
+const Hero = () => {
   return (
     <section className="relative min-h-[80vh] flex items-center overflow-hidden">
-      {/* Background Image - Full Coverage */}
+      {/* Background Image - Optimized */}
       <div className="absolute inset-0 z-0">
         <Image 
           src="/images/manik-hero.jpg" 
@@ -14,38 +16,34 @@ export default function Hero() {
           fill
           className="object-cover object-center"
           priority
+          quality={75}
+          sizes="100vw"
         />
-        {/* Gradient overlay - darker on left for text readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-primary-500/80 via-primary-600/65 to-primary-700/45"></div>
+        {/* Gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-primary-500/80 via-primary-600/65 to-primary-700/45" />
       </div>
 
-      {/* Top Right Logo - Minimal & Small */}
-      <motion.div
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        className="absolute top-4 right-4 md:top-6 md:right-8 z-20"
-      >
+      {/* Top Right Logo - No animation for better performance */}
+      <div className="absolute top-4 right-4 md:top-6 md:right-8 z-20">
         <Image 
           src="/images/c3-logo.jpg" 
           alt="C3 Career Consultants" 
           width={45}
           height={16}
           className="object-contain drop-shadow-lg md:w-[75px] md:h-[26px]"
+          priority
         />
-      </motion.div>
+      </div>
 
-      {/* Main Content Container - Left Side */}
+      {/* Main Content Container */}
       <div className="w-full relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 py-12 md:py-20">
-          {/* Content on left */}
           <div className="max-w-xl md:max-w-2xl">
-            
-            {/* Main Content */}
+            {/* Main Content - Simplified animations */}
             <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
               className="space-y-4 md:space-y-6"
             >
               {/* Headline */}
@@ -56,7 +54,7 @@ export default function Hero() {
                 </span>
               </h1>
 
-              {/* Subheading - Emphasizing C3 */}
+              {/* Subheading */}
               <p className="text-base sm:text-lg md:text-xl text-gray-100 leading-relaxed font-light">
                 <span className="font-bold text-accent-400">C3 Career Consultants</span> - 
                 Expert career counselling backed by{' '}
@@ -78,9 +76,9 @@ export default function Hero() {
               <div className="flex flex-col sm:flex-row gap-3 md:gap-4 pt-2">
                 <a 
                   href="#contact" 
-                  className="group inline-flex items-center justify-center gap-2 md:gap-3 px-6 py-3 md:px-8 md:py-4 bg-accent-500 hover:bg-accent-600 text-primary-700 font-bold text-sm md:text-base rounded-full transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-accent-500/50"
+                  className="group inline-flex items-center justify-center gap-2 md:gap-3 px-6 py-3 md:px-8 md:py-4 bg-accent-500 hover:bg-accent-600 text-primary-700 font-bold text-sm md:text-base rounded-full transition-all duration-300 transform hover:scale-105 shadow-2xl"
                 >
-                  <FaPhone className="text-base md:text-lg group-hover:rotate-12 transition-transform" />
+                  <FaPhone className="text-base md:text-lg" />
                   <span>Book Free Session</span>
                 </a>
                 <a 
@@ -91,7 +89,7 @@ export default function Hero() {
                 </a>
               </div>
 
-              {/* Stats Row - Responsive */}
+              {/* Stats Row */}
               <div className="grid grid-cols-3 gap-3 md:gap-6 pt-4 md:pt-6">
                 <div className="text-center">
                   <p className="text-2xl sm:text-3xl md:text-4xl font-bold text-accent-500">23+</p>
@@ -111,33 +109,25 @@ export default function Hero() {
               <div className="flex flex-col sm:flex-row sm:items-center gap-3 md:gap-4 pt-4 md:pt-6 border-t border-accent-500/30">
                 <span className="text-xs md:text-sm text-gray-200 font-medium">Connect with us:</span>
                 <div className="flex gap-2 md:gap-3">
-                  <a 
-                    href="https://wa.me/919781312020" 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    aria-label="WhatsApp"
-                    className="w-9 h-9 md:w-10 md:h-10 bg-white/15 hover:bg-success-500 backdrop-blur-sm rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110 border border-white/20"
-                  >
-                    <FaWhatsapp className="text-base md:text-lg text-white" />
-                  </a>
-                  <a 
-                    href="https://www.linkedin.com/in/manik-raj-singla-career-counsellor-and-consultant-5b154a203" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    aria-label="LinkedIn"
-                    className="w-9 h-9 md:w-10 md:h-10 bg-white/15 hover:bg-blue-600 backdrop-blur-sm rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110 border border-white/20"
-                  >
-                    <FaLinkedin className="text-base md:text-lg text-white" />
-                  </a>
-                  <a 
-                    href="https://www.facebook.com/manikrajsingla.CareerConsultant" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    aria-label="Facebook"
-                    className="w-9 h-9 md:w-10 md:h-10 bg-white/15 hover:bg-blue-500 backdrop-blur-sm rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110 border border-white/20"
-                  >
-                    <FaFacebook className="text-base md:text-lg text-white" />
-                  </a>
+                  {[
+                    { href: 'https://wa.me/919781312020', icon: FaWhatsapp, label: 'WhatsApp' },
+                    { href: 'https://www.linkedin.com/in/manik-raj-singla-career-counsellor-and-consultant-5b154a203', icon: FaLinkedin, label: 'LinkedIn' },
+                    { href: 'https://www.facebook.com/manikrajsingla.CareerConsultant', icon: FaFacebook, label: 'Facebook' },
+                  ].map((social) => {
+                    const Icon = social.icon;
+                    return (
+                      <a 
+                        key={social.label}
+                        href={social.href}
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        aria-label={social.label}
+                        className="w-9 h-9 md:w-10 md:h-10 bg-white/15 hover:bg-white/30 backdrop-blur-sm rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 border border-white/20"
+                      >
+                        <Icon className="text-base md:text-lg text-white" />
+                      </a>
+                    );
+                  })}
                 </div>
               </div>
             </motion.div>
@@ -145,5 +135,7 @@ export default function Hero() {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
+
+export default memo(Hero);

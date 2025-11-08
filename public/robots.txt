@@ -1,0 +1,13 @@
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+# Disallow admin areas (if any)
+Disallow: /api/
+Disallow: /_next/
+
+# Sitemap location
+Sitemap: https://c3consultants.in/sitemap.xml
+
+# Crawl-delay for good behavior
+Crawl-delay: 0.5

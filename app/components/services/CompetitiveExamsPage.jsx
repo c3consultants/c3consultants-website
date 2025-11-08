@@ -239,7 +239,7 @@ const CompetitiveExamsPage = () => {
               className="text-center"
             >
               {/* Badge */}
-              <span className="inline-flex items-center space-x-2 px-5 py-2.5 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-accent-400 text-sm font-bold mb-8">
+              <span className="inline-flex items-center space-x-2 px-5 py-2.5 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-accent-400 text-sm font-bold mb-4">
                 <HiAcademicCap className="w-4 h-4" />
                 <span>Complete Competitive Exam Preparation</span>
               </span>
@@ -294,7 +294,7 @@ const CompetitiveExamsPage = () => {
                   href="tel:+919781312020"
                   className="inline-flex items-center justify-center space-x-2 px-7 py-3 bg-white/10 backdrop-blur-md border-2 border-white text-white hover:bg-white hover:text-primary-600 font-bold rounded-xl transition-all duration-300"
                 >
-                  <span className="text-lg">Call: 9781312020</span>
+                  <span className="text-lg">Call: +91 9781312020</span>
                 </a>
               </motion.div>
             </motion.div>
@@ -309,7 +309,7 @@ const CompetitiveExamsPage = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6 }}
-            className="text-center mb-16"
+            className="text-center mb-8"
           >
             <span className="inline-block px-4 py-2 bg-primary-100 text-primary-600 rounded-full text-sm font-bold mb-4">
               Complete Coverage
@@ -323,7 +323,7 @@ const CompetitiveExamsPage = () => {
           </motion.div>
 
           {/* Category Tabs */}
-          <div className="flex flex-wrap items-center justify-center gap-3 mb-10">
+          <div className="flex flex-wrap items-center justify-start gap-3 mb-10">
             {examCategories.map((category, index) => {
               const Icon = category.icon;
               return (
@@ -357,7 +357,7 @@ const CompetitiveExamsPage = () => {
               className="max-w-4xl mx-auto"
             >
               <div className={`bg-gradient-to-br ${examCategories[selectedCategory].color} rounded-3xl p-6 text-white shadow-2xl`}>
-                <div className="flex items-center justify-between mb-8">
+                <div className="flex items-center justify-between mb-6">
                   <div>
                     <h3 className="text-3xl md:text-4xl font-bold mb-2">
                       {examCategories[selectedCategory].category}
@@ -389,7 +389,7 @@ const CompetitiveExamsPage = () => {
                   ))}
                 </div>
 
-                <div className="mt-8 pt-8 border-t border-white/20">
+                <div className="mt-4 pt-4 border-t border-white/20">
                   <Link
                     href="/contact"
                     className="inline-flex items-center space-x-2 px-6 py-3 bg-white text-primary-600 rounded-lg font-bold hover:bg-white/90 transition-all"
@@ -407,7 +407,7 @@ const CompetitiveExamsPage = () => {
       {/* Features Section */}
       <section className="section-padding bg-white">
         <div className="container-custom">
-          <div className="text-center mb-10">
+          <div className="text-center mb-8">
             <span className="inline-block px-4 py-2 bg-primary-100 text-primary-600 rounded-full text-sm font-bold mb-4">
               What We Offer
             </span>
@@ -463,7 +463,7 @@ const CompetitiveExamsPage = () => {
       {/* Course Structure Section */}
       <section className="section-padding bg-gradient-to-b from-neutral-50 to-white">
         <div className="container-custom">
-          <div className="text-center mb-10">
+          <div className="text-center mb-8">
             <span className="inline-block px-4 py-2 bg-primary-100 text-primary-600 rounded-full text-sm font-bold mb-4">
               Our Approach
             </span>
@@ -475,7 +475,7 @@ const CompetitiveExamsPage = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {courseStructure.map((phase, index) => {
               const Icon = phase.icon;
               return (
@@ -487,7 +487,7 @@ const CompetitiveExamsPage = () => {
                   transition={{ delay: index * 0.1, duration: 0.5 }}
                   className="relative group"
                 >
-                  <div className="bg-white rounded-2xl border-2 border-neutral-200 group-hover:border-primary-500 p-8 transition-all hover:shadow-xl h-full">
+                  <div className="bg-white rounded-2xl border-2 border-neutral-200 group-hover:border-primary-500 p-4 transition-all hover:shadow-xl h-full flex flex-col justify-center items-center">
                     <div className="w-14 h-14 bg-gradient-to-br from-accent-600 to-accent-500 rounded-xl flex items-center justify-center mb-5 text-white font-bold text-2xl shadow-lg">
                       {index + 1}
                     </div>
@@ -531,7 +531,7 @@ const CompetitiveExamsPage = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-10"
+            className="text-center mb-8"
           >
             <span className="inline-block px-4 py-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-accent-300 text-sm font-bold mb-4">
               Our Advantages
@@ -554,7 +554,7 @@ const CompetitiveExamsPage = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.05, duration: 0.4 }}
-                  className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 hover:bg-white/20 transition-all group"
+                  className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-4 hover:bg-white/20 transition-all group"
                 >
                   <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center mb-4 group-hover:bg-accent-500 transition-all">
                     <Icon className="w-6 h-6 text-white" />

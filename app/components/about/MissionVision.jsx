@@ -21,7 +21,7 @@ const MissionVision = () => {
       icon: HiEye,
       title: 'Our Vision',
       description: 'To be the most trusted career consulting partner, recognized for excellence, innovation, and life-changing impact in developing confident, skilled, and successful professionals.',
-      color: 'from-accent-500 to-accent-400',
+      color: 'from-accent-600 to-accent-500',
       features: ['Excellence', 'Innovation', 'Impact'],
     },
   ];

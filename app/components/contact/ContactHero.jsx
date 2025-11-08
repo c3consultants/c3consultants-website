@@ -68,7 +68,7 @@ const ContactHero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.6 }}
-            className="grid grid-cols-2 gap-4 md:gap-6 pt-8 max-w-4xl mx-auto"
+            className="grid grid-cols-2 gap-4 md:gap-6 pt-4 max-w-4xl mx-auto"
           >
             {quickContact.map((contact, index) => {
               const Icon = contact.icon;
@@ -84,7 +84,7 @@ const ContactHero = () => {
                 >
                   <Icon className="w-8 h-8 text-accent-300 mx-auto mb-3 group-hover:scale-110 transition-transform" />
                   <p className="text-white/70 text-sm mb-1">{contact.title}</p>
-                  <p className="text-white font-semibold text-xs sm:text-sm break-all">{contact.value}</p>
+                  <p className="text-white font-semibold text-xs sm:text-sm break-words overflow-wrap-anywhere">{contact.value}</p>
                 </motion.a>
               );
             })}

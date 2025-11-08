@@ -119,6 +119,8 @@ const Footer = () => {
                     alt="C3 Career Consultants Logo"
                     fill
                     className="object-contain group-hover:scale-110 transition-transform duration-300"
+                    priority
+                    sizes="(max-width: 768px) 48px, 56px"
                   />
                 </div>
                 <div>

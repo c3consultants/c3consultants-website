@@ -7,17 +7,9 @@ import { HiHome, HiArrowLeft } from 'react-icons/hi';
 
 export default function NotFound() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-primary-900 via-primary-800 to-neutral-900 flex items-center justify-center px-4 py-16 relative overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-primary-900 via-primary-800 to-neutral-900 flex items-center justify-center px-4 py-20 relative overflow-hidden">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <motion.div
-          animate={{ 
-            scale: [1, 1.2, 1],
-            opacity: [0.3, 0.2, 0.3],
-          }}
-          transition={{ duration: 8, repeat: Infinity }}
-          className="absolute top-0 right-0 w-96 h-96 bg-accent-500 rounded-full blur-3xl"
-        />
         <motion.div
           animate={{ 
             scale: [1, 1.1, 1],
@@ -41,34 +33,15 @@ export default function NotFound() {
             <div className="relative aspect-square max-w-lg mx-auto">
               {/* Placeholder for your custom 404 vector image */}
               <div className="absolute inset-0 bg-gradient-to-br from-primary-500/20 to-accent-500/20 backdrop-blur-sm rounded-3xl border-2 border-white/10 flex items-center justify-center">
-                {/* Replace this div with your actual image */}
-                <div className="text-center p-8">
-                  <div className="text-9xl font-bold text-white/20 mb-4">404</div>
-                  <p className="text-white/40 text-sm">
-                    Add your custom 404 vector image here:
-                    <br />
-                    <code className="text-accent-300 text-xs">
-                      /public/images/404-illustration.svg
-                    </code>
-                  </p>
-                </div>
-                
-                {/* Uncomment this when you add your image */}
-                {/* <Image
-                  src="/images/404-illustration.svg"
+                <Image
+                  src="/images/404.png"
                   alt="404 Not Found"
                   fill
-                  className="object-contain p-8"
+                  className="object-contain p-4"
                   priority
-                /> */}
+                />
               </div>
 
-              {/* Decorative elements */}
-              <motion.div
-                animate={{ rotate: 360 }}
-                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                className="absolute -top-8 -right-8 w-24 h-24 border-4 border-accent-500/30 rounded-full"
-              />
               <motion.div
                 animate={{ rotate: -360 }}
                 transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
@@ -118,14 +91,14 @@ export default function NotFound() {
             >
               <Link
                 href="/"
-                className="inline-flex items-center justify-center space-x-2 px-8 py-4 bg-accent-500 hover:bg-accent-600 text-white font-bold rounded-lg transition-all duration-300 shadow-lg-gold hover:shadow-xl-gold transform hover:scale-105"
+                className="inline-flex items-center justify-center space-x-2 px-7 py-3 bg-accent-500 hover:bg-accent-600 text-white font-bold rounded-lg transition-all duration-300 shadow-lg-gold hover:shadow-xl-gold transform hover:scale-105"
               >
                 <HiHome className="w-5 h-5" />
                 <span>Go Home</span>
               </Link>
               <button
                 onClick={() => window.history.back()}
-                className="inline-flex items-center justify-center space-x-2 px-8 py-4 bg-white/10 backdrop-blur-md border-2 border-white text-white hover:bg-white hover:text-primary-600 font-bold rounded-lg transition-all duration-300"
+                className="inline-flex items-center justify-center space-x-2 px-7 py-3 bg-white/10 backdrop-blur-md border-2 border-white text-white hover:bg-white hover:text-primary-600 font-bold rounded-lg transition-all duration-300"
               >
                 <HiArrowLeft className="w-5 h-5" />
                 <span>Go Back</span>
@@ -137,7 +110,7 @@ export default function NotFound() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6, duration: 0.6 }}
-              className="pt-8 border-t border-white/20"
+              className="pt-4 border-t border-white/20"
             >
               <p className="text-white/60 text-sm mb-4">Looking for something specific?</p>
               <div className="flex flex-wrap gap-3">

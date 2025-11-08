@@ -79,13 +79,13 @@ const ValuesSection = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-10"
+          className="text-center mb-8"
         >
           <span className="inline-block px-4 py-2 bg-primary-100 text-primary-600 rounded-full text-sm font-bold mb-4 shadow-sm">
             Our Core Principles
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-primary-900 mb-4">
-            Values That <span className="text-gradient">Guide Us</span>
+            Values That Guide Us
           </h2>
           <p className="text-base md:text-lg text-neutral-600 max-w-3xl mx-auto">
             The fundamental principles that drive our commitment to student success and organizational excellence
@@ -97,7 +97,7 @@ const ValuesSection = () => {
           variants={containerVariants}
           initial="hidden"
           animate={inView ? 'visible' : 'hidden'}
-          className="grid grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8"
+          className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8"
         >
           {values.map((value, index) => {
             const Icon = value.icon;

@@ -111,7 +111,7 @@ const ContactForm = () => {
   };
 
   return (
-    <section ref={ref} className="py-10 bg-gradient-to-br from-neutral-50 to-primary-50 ">
+    <section ref={ref} className="pt-10 bg-gradient-to-br from-neutral-50 to-primary-50 ">
       <div className="container-custom max-w-2xl lg:max-w-none px-4">
         <motion.div
           initial={{ opacity: 0, x: -50 }}
