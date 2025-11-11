@@ -5,7 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
-import { HiMenu, HiX, HiPhone, HiChevronRight, HiChevronDown, HiClock } from 'react-icons/hi';
+import { HiMenu, HiX, HiPhone, HiChevronRight, HiChevronDown } from 'react-icons/hi';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -24,7 +24,6 @@ const Header = () => {
       }, 10);
     };
 
-    // Passive listener for better scroll performance
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => {
       clearTimeout(timeoutId);
@@ -32,7 +31,6 @@ const Header = () => {
     };
   }, []);
 
-  // Prevent body scroll when mobile menu is open
   useEffect(() => {
     document.body.style.overflow = isMobileMenuOpen ? 'hidden' : 'unset';
     return () => {
@@ -44,6 +42,8 @@ const Header = () => {
     { name: 'Home', href: '/' },
     { name: 'About', href: '/about' },
     { name: 'Services', href: '#', hasDropdown: true },
+    { name: 'Awards', href: '/awards' },
+    { name: 'Results', href: '/results' },
     { name: 'Contact', href: '/contact' },
   ], []);
 
@@ -107,7 +107,7 @@ const Header = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-8">
+          <div className="hidden lg:flex items-center space-x-6 xl:space-x-8">
             {navigation.map((item) => (
               <div
                 key={item.name}
@@ -126,7 +126,6 @@ const Header = () => {
                     <span>{item.name}</span>
                     <HiChevronDown className={`w-4 h-4 transition-transform duration-300 ${isServicesOpen ? 'rotate-180' : ''}`} />
                     
-                    {/* Hover Underline for Services Dropdown */}
                     <span
                       className={`absolute -bottom-1 left-0 h-0.5 transition-all duration-300 ${
                         isScrolled ? 'bg-primary-600' : 'bg-accent-400'
@@ -146,7 +145,6 @@ const Header = () => {
                   >
                     {item.name}
                     
-                    {/* Hover Underline for Regular Links */}
                     <span
                       className={`absolute -bottom-1 left-0 h-0.5 transition-all duration-300 ${
                         isScrolled ? 'bg-primary-600' : 'bg-accent-400'
@@ -348,10 +346,10 @@ const Header = () => {
                   </Link>
                 </div>
 
-                {/* Office Hours Footer */}
-                <div className="border-t border-neutral-200">
-                  <p className="text-center text-xs text-neutral-500 mt-4">Mon - Sat: 9:00 AM - 6:00 PM</p>
-                  <p className="text-center text-xs text-neutral-500 mt-4">Sunday: Closed</p>
+                {/* Office Hours */}
+                <div className="border-t border-neutral-200 pt-4">
+                  <p className="text-center text-xs text-neutral-500">Mon - Sat: 9:00 AM - 6:00 PM</p>
+                  <p className="text-center text-xs text-neutral-500 mt-1">Sunday: Closed</p>
                 </div>
               </div>
             </motion.div>

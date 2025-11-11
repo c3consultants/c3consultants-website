@@ -2,9 +2,8 @@ import HeroCarousel from '@/app/components/HeroCarousel';
 import StatsCounter from '@/app/components/StatsCounter';
 import AboutPreview from '@/app/components/AboutPreview';
 import ServicesSection from '@/app/components/ServicesSection';
-import AchievementCarousel from '@/app/components/AchievementCarousel';
-import TestimonialSlider from '@/app/components/TestimonialSlider';
 import CTASection from '@/app/components/CTASection';
+import AchievementShowcase from '@/app/components/AchievementShowcase';
 
 export const metadata = {
   title: 'Best Career Counsellor in Patiala| Expert SSC UPSC Coaching - Manik Raj Singla',
@@ -278,10 +277,7 @@ export default function Home() {
         <ServicesSection />
 
         {/* Achievements Carousel */}
-        <AchievementCarousel />
-
-        {/* Testimonials Section */}
-        <TestimonialSlider />
+        <AchievementShowcase />
 
         {/* CTA Section */}
         <CTASection />

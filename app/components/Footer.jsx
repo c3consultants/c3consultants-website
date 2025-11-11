@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Image from 'next/image';
-import { HiPhone, HiMail, HiLocationMarker, HiClock, HiArrowRight } from 'react-icons/hi';
+import { HiPhone, HiMail, HiLocationMarker, HiClock } from 'react-icons/hi';
 import { FaFacebook, FaLinkedin, FaYoutube, FaTwitter } from 'react-icons/fa';
 
 const Footer = () => {
@@ -12,6 +12,8 @@ const Footer = () => {
   const quickLinks = [
     { name: 'Home', href: '/' },
     { name: 'About Us', href: '/about' },
+    { name: 'Awards', href: '/awards' },
+    { name: 'Results', href: '/results' },
     { name: 'Contact', href: '/contact' },
   ];
 
@@ -100,7 +102,7 @@ const Footer = () => {
 
       {/* Main Footer Content */}
       <div className="container-custom py-10 relative z-10">
-        {/* Grid Layout - 2 columns on mobile, 4 on desktop */}
+        {/* Grid Layout */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
@@ -111,7 +113,7 @@ const Footer = () => {
           {/* Company Info */}
           <motion.div variants={itemVariants} className="col-span-2 md:col-span-1 lg:col-span-1">
             <div className="space-y-6">
-              {/* Logo with Image */}
+              {/* Logo */}
               <Link href="/" className="inline-flex items-center space-x-3 group">
                 <div className="relative w-12 h-12 rounded-lg overflow-hidden flex-shrink-0">
                   <Image
@@ -119,8 +121,7 @@ const Footer = () => {
                     alt="C3 Career Consultants Logo"
                     fill
                     className="object-contain group-hover:scale-110 transition-transform duration-300"
-                    priority
-                    sizes="(max-width: 768px) 48px, 56px"
+                    sizes="48px"
                   />
                 </div>
                 <div>
@@ -192,7 +193,7 @@ const Footer = () => {
             </ul>
           </motion.div>
 
-          {/* Contact Info - Compact for mobile */}
+          {/* Contact Info */}
           <motion.div variants={itemVariants} className="col-span-2 md:col-span-1 lg:col-span-1">
             <h4 className="font-serif text-lg font-bold mb-6">Contact</h4>
             <div className="space-y-4">
