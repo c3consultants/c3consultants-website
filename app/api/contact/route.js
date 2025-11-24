@@ -14,7 +14,7 @@ export async function POST(request) {
     // Send email via Resend
     const data = await resend.emails.send({
       from: 'C3 Career Consultants <onboarding@resend.dev>', // Replace with your verified domain
-      to: ['contact@c3consultants.in'], // Your receiving email
+      to: ['nitinemailss@gmail.com'], // Your receiving email
       replyTo: validatedData.email,
       subject: `New Contact Form Submission - ${validatedData.service}`,
       html: `
