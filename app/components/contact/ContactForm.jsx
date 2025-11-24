@@ -54,6 +54,8 @@ const ContactForm = () => {
         },
         body: JSON.stringify(validatedData),
       });
+      console.log("Sending form:", validatedData);
+
 
       const data = await response.json();
 
@@ -224,11 +226,12 @@ const ContactForm = () => {
                 name="service"
                 value={formData.service}
                 onChange={handleChange}
+                required
                 className={`w-full px-4 py-3 rounded-lg border-2 ${
                   errors.service ? 'border-red-500' : 'border-neutral-300'
                 } focus:border-primary-500 focus:outline-none transition-colors text-neutral-900`}
               >
-                <option value="">Select a service</option>
+                <option value="" disabled>Select a service</option>
                 {services.map((service) => (
                   <option key={service} value={service}>
                     {service}
