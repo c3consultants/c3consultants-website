@@ -20,7 +20,7 @@ const ContactInfo = () => {
     {
       icon: HiMail,
       title: 'Email',
-      value: 'contact@c3consultants.in',
+      value: 'manikrajsingla@gmail.com',
       subtext: 'We reply within 24 hours',
       href: 'mailto:contact@c3consultants.in',
       action: 'Send Email',

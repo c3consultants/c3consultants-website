@@ -23,8 +23,8 @@ const CTASection = () => {
     {
       icon: HiMail,
       title: 'Email Us',
-      value: 'contact@c3consultants.in',
-      href: 'mailto:contact@c3consultants.in',
+      value: 'manikrajsingla@gmail.com',
+      href: 'mailto:manikrajsingla@gmail.com',
       description: 'We reply within 24 hours',
     },
     {

@@ -8,64 +8,71 @@ export async function generateMetadata({ params }) {
   
   const metaData = {
     'career-counselling': {
-      title: 'Best Career Counselling in Patiala | Psychometric Test & Guidance - C3 Consultants',
-      description: 'Expert career counselling services in Patiala by Manik Raj Singla. Psychometric assessments, stream selection, course guidance for 10th/12th students. Personalized career roadmap. 23+ years experience. Book free session!',
+      title: 'Best Career Counselling in Patiala | Top Consultancy | Psychometric Test & Guidance',
+      description: 'Best career counselling & consultancy services in Patiala by Manik Raj Singla. Expert psychometric assessments, stream selection, course guidance for 10th/12th students. Personalized career roadmap from Patiala\'s top consultancy. 23+ years experience, 5000+ students guided. Book free session!',
       keywords: [
-        'career counselling Patiala',
+        'best career counselling Patiala',
+        'career consultancy Patiala',
+        'top consultancy Patiala',
         'career counsellor for students Patiala',
         'psychometric test Patiala',
         'stream selection after 10th Patiala',
         'course selection after 12th Punjab',
-        'career guidance Patiala',
+        'best career guidance Patiala',
         'vocational counselling Patiala',
-        'career planning services Punjab',
+        'Manik Raj Singla career counselling',
       ],
       openGraph: {
-        title: 'Best Career Counselling Services in Patiala | C3 Consultants',
-        description: 'Expert career guidance with psychometric assessments. Help students choose right career path.',
+        title: 'Best Career Counselling & Consultancy Services in Patiala',
+        description: 'Expert career guidance with psychometric assessments. Patiala\'s top consultancy for students.',
         url: 'https://c3consultants.in/services/career-counselling',
         type: 'website',
+        locale: 'en_IN',
       },
     },
     'competitive-exams': {
-      title: 'SSC UPSC Banking Coaching Patiala | Best Exam Preparation - C3 Consultants',
-      description: 'Top-rated SSC, UPSC, Banking, CTET exam coaching in Patiala. Expert faculty, study material, mock tests. SSC CGL, IBPS PO/Clerk, Civil Services preparation. 95% success rate. Join 1000+ selections. Enroll now!',
+      title: 'Best SSC UPSC Banking Coaching Patiala | Top Competitive Exam Consultancy',
+      description: 'Best competitive exam coaching in Patiala - C3 Consultants. Expert SSC, UPSC, Banking, CTET coaching. Top-rated faculty, study material, mock tests. SSC CGL, IBPS PO/Clerk, Civil Services preparation. 95% success rate, 1000+ selections. Join Patiala\'s best consultancy for competitive exams!',
       keywords: [
-        'SSC coaching Patiala',
+        'best SSC coaching Patiala',
         'UPSC coaching Patiala',
+        'competitive exam coaching Patiala',
         'banking exam coaching Patiala',
-        'CTET coaching Punjab',
+        'best consultancy competitive exams Patiala',
         'SSC CGL coaching Patiala',
         'IBPS coaching Patiala',
-        'civil services coaching Punjab',
         'government exam preparation Patiala',
-        'competitive exam coaching near me',
+        'CTET coaching Punjab',
+        'Manik Raj Singla coaching',
       ],
       openGraph: {
-        title: 'SSC, UPSC & Banking Exam Coaching in Patiala | C3 Consultants',
-        description: 'Comprehensive competitive exam preparation. 1000+ selections. Expert coaching for SSC, UPSC, Banking exams.',
+        title: 'Best SSC, UPSC & Banking Exam Coaching in Patiala',
+        description: 'Top consultancy for competitive exams. 1000+ selections. Expert coaching.',
         url: 'https://c3consultants.in/services/competitive-exams',
         type: 'website',
+        locale: 'en_IN',
       },
     },
     'motivational-speaking': {
-      title: 'Motivational Speaker Patiala | Leadership Training & Corporate Workshops - C3',
-      description: 'Hire top motivational speaker in Patiala - Manik Raj Singla. Corporate training, student workshops, leadership development, personality enhancement. 10,000+ lives impacted. Book inspiring sessions for schools, colleges & organizations.',
+      title: 'Best Motivational Speaker Patiala | Leadership Training & Corporate Workshops',
+      description: 'Hire Patiala\'s best motivational speaker - Manik Raj Singla. Top consultancy for corporate training, student workshops, leadership development, personality enhancement. 10,000+ lives impacted. Book inspiring sessions for schools, colleges & organizations in Patiala, Punjab.',
       keywords: [
-        'motivational speaker Patiala',
+        'best motivational speaker Patiala',
+        'motivational speaker consultancy Patiala',
         'corporate training Patiala',
         'leadership training Punjab',
         'personality development Patiala',
-        'motivational workshops Patiala',
-        'student motivation seminars',
+        'student motivation seminars Patiala',
         'success coach Patiala',
         'inspirational speaker Punjab',
+        'Manik Raj Singla speaker',
       ],
       openGraph: {
-        title: 'Motivational Speaker & Leadership Training | C3 Patiala',
-        description: 'Transform teams with inspiring motivational sessions. 10,000+ lives impacted.',
+        title: 'Best Motivational Speaker & Leadership Training | Patiala',
+        description: 'Transform teams with inspiring sessions. 10,000+ lives impacted by Patiala\'s best.',
         url: 'https://c3consultants.in/services/motivational-speaking',
         type: 'website',
+        locale: 'en_IN',
       },
     },
   };
@@ -81,6 +88,16 @@ export async function generateMetadata({ params }) {
     ...metaData[slug],
     alternates: {
       canonical: `https://c3consultants.in/services/${slug}`,
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
+      },
     },
   };
 }
@@ -114,11 +131,12 @@ export default async function ServicePage({ params }) {
       '@context': 'https://schema.org',
       '@type': 'Service',
       serviceType: 'Career Counselling',
-      name: 'Career Counselling Services',
-      description: 'Professional career counselling with psychometric assessments and personalized guidance.',
+      name: 'Career Counselling & Consultancy Services',
+      description: 'Professional career counselling with psychometric assessments and personalized guidance in Patiala',
       provider: {
-        '@type': 'Organization',
+        '@type': 'ProfessionalService',
         name: 'C3 Career Consultants',
+        description: 'Best consultancy services in Patiala',
         address: {
           '@type': 'PostalAddress',
           streetAddress: 'SCO 4, Old Grain Market',
@@ -144,7 +162,7 @@ export default async function ServicePage({ params }) {
       '@context': 'https://schema.org',
       '@type': 'EducationalOrganization',
       name: 'C3 Career Consultants - Competitive Exam Coaching',
-      description: 'Expert coaching for SSC, UPSC, Banking and other competitive exams.',
+      description: 'Best consultancy in Patiala for SSC, UPSC, Banking and competitive exam coaching',
       address: {
         '@type': 'PostalAddress',
         streetAddress: 'SCO 4, Old Grain Market',
@@ -155,7 +173,7 @@ export default async function ServicePage({ params }) {
       },
       hasOfferCatalog: {
         '@type': 'OfferCatalog',
-        name: 'Exam Coaching Services',
+        name: 'Competitive Exam Coaching Services',
         itemListElement: [
           {
             '@type': 'Offer',
@@ -173,6 +191,14 @@ export default async function ServicePage({ params }) {
               description: 'Civil Services, CDS, NDA coaching',
             },
           },
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Course',
+              name: 'Banking Exam Coaching',
+              description: 'IBPS PO, Clerk, SBI preparation',
+            },
+          },
         ],
       },
     },
@@ -181,11 +207,12 @@ export default async function ServicePage({ params }) {
       '@type': 'Service',
       serviceType: 'Motivational Speaking',
       name: 'Motivational Speaking & Leadership Training',
-      description: 'Inspiring motivational sessions, corporate training, and leadership development programs.',
+      description: 'Inspiring motivational sessions, corporate training, and leadership development programs in Patiala and Punjab',
       provider: {
         '@type': 'Person',
         name: 'Manik Raj Singla',
         jobTitle: 'Motivational Speaker',
+        description: 'Best motivational speaker in Patiala',
         address: {
           '@type': 'PostalAddress',
           addressLocality: 'Patiala',

@@ -65,8 +65,8 @@ const Footer = () => {
     {
       icon: HiMail,
       title: 'Email',
-      value: 'contact@c3consultants.in',
-      href: 'mailto:contact@c3consultants.in',
+      value: 'manikrajsingla@gmail.com',
+      href: 'mailto:manikrajsingla@gmail.com',
     },
     {
       icon: HiClock,

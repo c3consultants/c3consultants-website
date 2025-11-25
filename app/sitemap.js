@@ -1,6 +1,6 @@
 export default function sitemap() {
   const baseUrl = 'https://c3consultants.in';
-  const currentDate = new Date();
+  const currentDate = new Date().toISOString();
   
   return [
     {
@@ -19,7 +19,7 @@ export default function sitemap() {
       url: `${baseUrl}/awards`,
       lastModified: currentDate,
       changeFrequency: 'monthly',
-      priority: 0.9,
+      priority: 0.85,
     },
     {
       url: `${baseUrl}/results`,
@@ -31,19 +31,19 @@ export default function sitemap() {
       url: `${baseUrl}/services/career-counselling`,
       lastModified: currentDate,
       changeFrequency: 'weekly',
-      priority: 0.9,
+      priority: 0.95,
     },
     {
       url: `${baseUrl}/services/competitive-exams`,
       lastModified: currentDate,
       changeFrequency: 'weekly',
-      priority: 0.9,
+      priority: 0.95,
     },
     {
       url: `${baseUrl}/services/motivational-speaking`,
       lastModified: currentDate,
       changeFrequency: 'weekly',
-      priority: 0.9,
+      priority: 0.85,
     },
     {
       url: `${baseUrl}/contact`,

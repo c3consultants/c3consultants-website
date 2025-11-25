@@ -54,8 +54,6 @@ const ContactForm = () => {
         },
         body: JSON.stringify(validatedData),
       });
-      console.log("Sending form:", validatedData);
-
 
       const data = await response.json();
 

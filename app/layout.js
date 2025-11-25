@@ -18,52 +18,50 @@ const playfair = Playfair_Display({
 export const metadata = {
   metadataBase: new URL('https://c3consultants.in'),
   title: {
-    default: 'C3 Career Consultants - Manik Raj Singla | Best Career Counsellor in Patiala',
-    template: '%s | C3 Career Consultants Patiala'
+    default: 'Best Career Consultancy in Patiala | C3 Consultants | Manik Raj Singla',
+    template: '%s | C3 Career Consultants'
   },
-  description: 'Top-rated career counsellor in Patiala with 23+ years experience. Expert SSC/UPSC/Banking exam coaching, career guidance & motivational speaking. Book consultation with Manik Raj Singla today!',
+  description: 'Patiala\'s best consultancy services for career guidance & competitive exams. C3 Career Consultants by Manik Raj Singla - 23+ years excellence in SSC, UPSC, Banking coaching. Top-rated career consultancy in Patiala, Punjab. 5000+ students guided. Call 9781312020',
   keywords: [
-    // Primary Keywords
-    'best career counsellor in Patiala',
-    'career consultant Patiala',
-    'Manik Raj Singla',
-    'C3 Career Consultants',
+    // Primary Local Keywords
+    'best consultancy in Patiala',
+    'best career consultancy Patiala',
+    'top consultancy services Patiala',
+    'career consultancy Patiala Punjab',
     
-    // Location-based Keywords
-    'career counselling Patiala Punjab',
-    'best career guidance Patiala',
-    'career counselor near me Patiala',
-    'top career consultant Punjab',
-    
-    // Service Keywords
+    // Service + Location Keywords
+    'best career counselling Patiala',
+    'competitive exam coaching Patiala',
     'SSC coaching Patiala',
     'UPSC coaching Patiala',
     'banking exam coaching Patiala',
-    'competitive exam preparation Patiala',
+    
+    // Brand Keywords
+    'Manik Raj Singla',
+    'C3 Career Consultants',
+    'C3 consultancy Patiala',
+    
+    // Long-tail Keywords
+    'best career guidance consultancy Patiala',
+    'top competitive exam coaching center Patiala',
+    'best career counsellor in Patiala Punjab',
     'government exam coaching Patiala',
     
-    // Specific Exams
+    // Specific Exams + Location
     'SSC CGL coaching Patiala',
-    'IBPS coaching Patiala',
-    'SBI PO coaching Patiala',
-    'CTET coaching Patiala',
-    'UGC NET coaching Patiala',
+    'IBPS PO coaching Patiala',
+    'UPSC civil services Patiala',
+    'CTET coaching Patiala Punjab',
     
     // Career Services
-    'career counselling after 10th Patiala',
-    'career counselling after 12th Patiala',
+    'career planning consultancy Patiala',
     'stream selection guidance Patiala',
-    'psychometric test Patiala',
+    'psychometric assessment Patiala',
     
-    // Motivational Speaking
+    // Additional Services
     'motivational speaker Patiala',
+    'corporate training Patiala Punjab',
     'personality development Patiala',
-    'corporate training Patiala',
-    
-    // Broad Keywords
-    'best career counselor Punjab',
-    'career guidance India',
-    'career planning services',
   ],
   authors: [{ name: 'Manik Raj Singla', url: 'https://c3consultants.in/about' }],
   creator: 'C3 Career Consultants',
@@ -80,24 +78,25 @@ export const metadata = {
     type: 'website',
     locale: 'en_IN',
     url: 'https://c3consultants.in',
-    title: 'Best Career Counsellor in Patiala | Expert Guidance by Manik Raj Singla',
-    description: 'Transform your career with Patiala\'s top career counsellor. 23+ years experience, 5000+ students guided, 95% success rate. SSC/UPSC coaching & personalized career guidance.',
-    siteName: 'C3 Career Consultants Patiala',
+    title: 'Best Career Consultancy in Patiala | Expert Guidance by Manik Raj Singla',
+    description: 'Patiala\'s #1 career consultancy. 23+ years excellence, 5000+ students guided, 95% success rate. Best SSC/UPSC/Banking coaching & personalized career guidance in Punjab.',
+    siteName: 'C3 Career Consultants - Best Consultancy in Patiala',
     images: [
       {
-        url: '/images/og-image.jpg',
+        url: 'https://c3consultants.in/images/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'C3 Career Consultants - Best Career Counsellor in Patiala',
+        alt: 'C3 Career Consultants - Best Consultancy Services in Patiala',
+        type: 'image/jpeg',
       }
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Best Career Counsellor in Patiala | C3 Career Consultants',
-    description: 'Transform your career with expert guidance. 23+ years experience in career counselling & exam preparation in Patiala, Punjab.',
+    title: 'Best Career Consultancy in Patiala | C3 Consultants',
+    description: 'Top-rated consultancy for career guidance & competitive exams. 23+ years expertise in Patiala, Punjab.',
     creator: '@manikrajsingla',
-    images: ['/images/twitter-image.jpg'],
+    images: ['https://c3consultants.in/images/twitter-image.jpg'],
   },
   robots: {
     index: true,
@@ -113,26 +112,33 @@ export const metadata = {
   },
   verification: {
     google: 'your-google-verification-code',
-    yandex: 'your-yandex-verification-code',
-    bing: 'your-bing-verification-code',
   },
-  category: 'Education',
+  category: 'Education & Career Services',
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
       <head>
-        {/* Additional SEO Meta Tags */}
+        {/* Enhanced Local SEO Meta Tags */}
         <meta name="geo.region" content="IN-PB" />
-        <meta name="geo.placename" content="Patiala" />
+        <meta name="geo.placename" content="Patiala, Punjab" />
         <meta name="geo.position" content="30.3398;76.3869" />
         <meta name="ICBM" content="30.3398, 76.3869" />
         
-        {/* Preconnect to external domains */}
+        {/* Additional Business Info */}
+        <meta name="rating" content="General" />
+        <meta name="distribution" content="Global" />
+        <meta name="coverage" content="Worldwide" />
+        <meta name="target" content="students, professionals, job seekers" />
+        
+        {/* Preconnect for performance */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+        
+        {/* Favicon */}
+        <link rel="icon" href="/images/favicon.ico" />
+        <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
       </head>
       <body className="font-sans antialiased bg-white text-neutral-800">
         <Header />
