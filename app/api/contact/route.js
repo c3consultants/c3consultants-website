@@ -1,3 +1,4 @@
+// File: app/api/contact/route.js
 import { NextResponse } from 'next/server';
 import { Resend } from 'resend';
 import { contactFormSchema } from '@/app/lib/validations/contact';
@@ -7,15 +8,21 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 export async function POST(request) {
   try {
     const body = await request.json();
-
-    // Validate with Zod
     const validatedData = contactFormSchema.parse(body);
 
-    // Send email via Resend
+    console.log('Attempting to send email:', {
+  from: 'onboarding@resend.dev',
+  to: 'nitinemailss@gmail.com',
+  subject: validatedData.service,
+});
+console.log('Resend response:', data);
+
+
+    // Use Resend's test domain for development
     const data = await resend.emails.send({
-      from: 'C3 Career Consultants <c3consultants.in@gmail.com>', // Replace with your verified domain
-      to: ['nitinemailss@gmail.com'], // Your receiving email
-      replyTo: validatedData.email,
+      from: 'C3 Career Consultants <onboarding@resend.dev>', // ✅ Resend's test domain
+      to: ['nitinemailss@gmail.com'],
+      replyTo: validatedData.email, // User's email for replies
       subject: `New Contact Form Submission - ${validatedData.service}`,
       html: `
         <!DOCTYPE html>
@@ -62,13 +69,16 @@ export async function POST(request) {
                 ${validatedData.message ? `
                 <div class="field">
                   <div class="label">Message:</div>
-                  <div class="value">${validatedData.message}</div>
+                  <div class="value">${validatedData.message.replace(/\n/g, '<br>')}</div>
                 </div>
                 ` : ''}
                 
                 <div class="footer">
                   <p>This email was sent from the contact form on C3 Career Consultants website.</p>
                   <p>Received on ${new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' })}</p>
+                  <p style="margin-top: 10px;">
+                    <strong>Reply to:</strong> ${validatedData.email}
+                  </p>
                 </div>
               </div>
             </div>
@@ -77,12 +87,13 @@ export async function POST(request) {
       `,
     });
 
+    console.log('Email sent successfully:', data); // Add logging
+
     return NextResponse.json(
       { message: 'Email sent successfully', id: data.id },
       { status: 200 }
     );
   } catch (error) {
-    // Zod validation error
     if (error.name === 'ZodError') {
       return NextResponse.json(
         { 
@@ -96,10 +107,9 @@ export async function POST(request) {
       );
     }
 
-    // Resend API error
     console.error('Contact form error:', error);
     return NextResponse.json(
-      { message: 'Failed to send email. Please try again later.' },
+      { message: 'Failed to send email. Please try again later.', error: error.message },
       { status: 500 }
     );
   }
