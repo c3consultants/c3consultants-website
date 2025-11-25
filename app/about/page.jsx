@@ -7,8 +7,8 @@ import ValuesSection from '@/app/components/about/ValuesSection';
 import CTASection from '@/app/components/CTASection';
 
 export const metadata = {
-  title: 'About Manik Raj Singla | Best Career Consultancy in Patiala | 23+ Years Excellence',
-  description: 'Meet Manik Raj Singla, founder of C3 Career Consultants - Patiala\'s best consultancy services. MBA in Career Counselling, 23+ years experience, 5000+ students guided. Expert in SSC/UPSC coaching, competitive exams & career guidance in Patiala, Punjab.',
+  title: 'About Manik Raj Singla | Best Consultancy Patiala',
+  description: 'Founder of C3 - Patiala\'s best consultancy. 23+ years, 5000+ students guided, 95% success. Expert career guidance & competitive exam coaching.',
   keywords: [
     'Manik Raj Singla',
     'best consultancy in Patiala',
@@ -25,8 +25,8 @@ export const metadata = {
     canonical: 'https://c3consultants.in/about',
   },
   openGraph: {
-    title: 'About Manik Raj Singla | Best Career Consultancy in Patiala',
-    description: '23+ years of excellence. Patiala\'s most trusted career consultancy with 5000+ students successfully guided.',
+    title: 'About Manik Raj Singla | Best Consultancy Patiala',
+    description: '23+ years excellence. Patiala\'s most trusted consultancy with 5000+ students guided.',
     url: 'https://c3consultants.in/about',
     type: 'profile',
     locale: 'en_IN',
@@ -36,14 +36,14 @@ export const metadata = {
         url: 'https://c3consultants.in/images/manik-raj-singla.jpg',
         width: 1200,
         height: 630,
-        alt: 'Manik Raj Singla - Best Career Counsellor in Patiala',
+        alt: 'Manik Raj Singla - Best Career Counsellor Patiala',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'About Manik Raj Singla | Career Consultancy Expert Patiala',
-    description: '23+ years experience. Best consultancy services in Patiala for career guidance & competitive exams.',
+    title: 'About Manik Raj Singla | Best Consultancy Patiala',
+    description: '23+ years excellence. Best consultancy services in Patiala for career guidance.',
     creator: '@manikrajsingla',
   },
   robots: {

@@ -5,8 +5,8 @@ import MapLocation from '@/app/components/contact/MapLocation';
 import ContactFAQ from '@/app/components/contact/ContactFAQ';
 
 export const metadata = {
-  title: 'Contact Best Career Consultancy Patiala | Book Free Consultation | Call 9781312020',
-  description: 'Contact Patiala\'s best consultancy services - C3 Career Consultants. Book free consultation with Manik Raj Singla for career guidance & competitive exam coaching. Visit SCO 4, Old Grain Market, Patiala. Call +91-9781312020. Mon-Sat 9AM-6PM.',
+  title: 'Contact Best Consultancy Patiala | Call 9781312020',
+  description: 'Contact C3 - Patiala\'s best consultancy. Free consultation. Visit SCO 4, Old Grain Market. Call 9781312020. Mon-Sat 9AM-6PM.',
   keywords: [
     'contact career consultancy Patiala',
     'best consultancy Patiala contact',
@@ -21,8 +21,8 @@ export const metadata = {
     canonical: 'https://c3consultants.in/contact',
   },
   openGraph: {
-    title: 'Contact Best Career Consultancy in Patiala | Free Consultation',
-    description: 'Get in touch with Patiala\'s leading consultancy. Free consultation. Call +91-9781312020.',
+    title: 'Contact Best Consultancy Patiala | Free Consultation',
+    description: 'Get in touch with Patiala\'s best consultancy. Free consultation. Call 9781312020.',
     url: 'https://c3consultants.in/contact',
     type: 'website',
     locale: 'en_IN',
@@ -38,8 +38,8 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Contact C3 Consultants | Best in Patiala',
-    description: 'Book free consultation with Patiala\'s best career consultancy. Call +91-9781312020.',
+    title: 'Contact Best Consultancy Patiala | C3 Consultants',
+    description: 'Book free consultation with Patiala\'s best. Call 9781312020.',
     creator: '@manikrajsingla',
   },
   robots: {

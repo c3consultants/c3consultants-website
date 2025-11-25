@@ -4,8 +4,8 @@ import AwardsTimeline from '@/app/components/awards/AwardsTimeline';
 import CTASection from '@/app/components/CTASection';
 
 export const metadata = {
-  title: 'Awards & Honours | Manik Raj Singla | Best Career Consultancy Patiala',
-  description: 'Celebrating 23+ years excellence in Patiala\'s best consultancy services. Rotary Visionary Leadership Award 2024, Zone 4 E-Directory Editor, Punjab Govt Independence Day Honour. 15+ prestigious awards for Manik Raj Singla\'s leadership in career counselling & community service.',
+  title: 'Awards & Honours | Best Consultancy Patiala',
+  description: '15+ awards celebrating 23+ years excellence. Rotary Visionary Award, Punjab Govt honour. Best career consultancy in Patiala.',
   keywords: [
     'Manik Raj Singla awards',
     'best consultancy Patiala awards',
@@ -22,8 +22,8 @@ export const metadata = {
     canonical: 'https://c3consultants.in/awards',
   },
   openGraph: {
-    title: 'Awards & Honours | Best Career Consultancy in Patiala',
-    description: 'Celebrating 23+ years excellence: Rotary awards, Government recognition. Patiala\'s most awarded career consultancy.',
+    title: 'Awards & Honours | Best Consultancy Patiala',
+    description: '15+ awards. Rotary recognition, Govt honours. Patiala\'s most awarded consultancy.',
     url: 'https://c3consultants.in/awards',
     type: 'website',
     locale: 'en_IN',
@@ -41,7 +41,7 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Awards & Honours | Best Consultancy Patiala',
-    description: '15+ prestigious awards. Excellence in career counselling and community service.',
+    description: '15+ prestigious awards. Excellence in career counselling.',
     creator: '@manikrajsingla',
     images: ['https://c3consultants.in/images/achivement2.jpg'],
   },
@@ -136,18 +136,18 @@ export default function AwardsPage() {
     mainEntity: [
       {
         '@type': 'Question',
-        name: 'What awards has Manik Raj Singla received for career consultancy?',
+        name: 'What awards has Manik Raj Singla received?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Manik Raj Singla has received 15+ prestigious awards including the Rotary Visionary Leadership Award 2024, Zone 4 E-Directory Editor recognition from Rotary International, and Independence Day Honour 2025 from the Government of Punjab for excellence in career consultancy and community service in Patiala.',
+          text: 'Manik Raj Singla has received 15+ awards including Rotary Visionary Leadership Award 2024, Zone 4 E-Directory Editor, and Independence Day Honour 2025 from Punjab Government for excellence in career consultancy.',
         },
       },
       {
         '@type': 'Question',
-        name: 'What leadership roles does Manik Raj Singla currently hold?',
+        name: 'What leadership roles does Manik Raj Singla hold?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Currently serving as Assistant Governor of Rotary International (District RID 3090), President of Patiala District Table Tennis Association, and Founder of C3 Career Consultants - Patiala\'s best consultancy for career guidance.',
+          text: 'Assistant Governor of Rotary International (RID 3090), President of Patiala Table Tennis Association, and Founder of C3 - best consultancy in Patiala.',
         },
       },
     ],

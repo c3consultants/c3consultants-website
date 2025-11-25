@@ -2,6 +2,7 @@ import { Inter, Playfair_Display } from 'next/font/google';
 import './globals.css';
 import Header from '@/app/components/Header';
 import Footer from '@/app/components/Footer';
+import Script from 'next/script';
 
 const inter = Inter({ 
   subsets: ['latin'],
@@ -18,50 +19,37 @@ const playfair = Playfair_Display({
 export const metadata = {
   metadataBase: new URL('https://c3consultants.in'),
   title: {
-    default: 'Best Career Consultancy in Patiala | C3 Consultants | Manik Raj Singla',
-    template: '%s | C3 Career Consultants'
+    default: 'Best Consultancy Patiala | C3 Career Consultants',
+    template: '%s | C3 Consultants Patiala'
   },
-  description: 'Patiala\'s best consultancy services for career guidance & competitive exams. C3 Career Consultants by Manik Raj Singla - 23+ years excellence in SSC, UPSC, Banking coaching. Top-rated career consultancy in Patiala, Punjab. 5000+ students guided. Call 9781312020',
+  description: 'Best consultancy in Patiala for career guidance & competitive exams. C3 by Manik Raj Singla - 23+ years, 5000+ students, 95% success. SSC, UPSC, Banking coaching.',
   keywords: [
-    // Primary Local Keywords
+    // Primary Focus Keywords
     'best consultancy in Patiala',
-    'best career consultancy Patiala',
-    'top consultancy services Patiala',
-    'career consultancy Patiala Punjab',
+    'best consultancy Patiala',
+    'top consultancy Patiala',
+    'career consultancy Patiala',
     
-    // Service + Location Keywords
+    // Service + Location
     'best career counselling Patiala',
     'competitive exam coaching Patiala',
     'SSC coaching Patiala',
     'UPSC coaching Patiala',
-    'banking exam coaching Patiala',
+    'banking coaching Patiala',
     
-    // Brand Keywords
-    'Manik Raj Singla',
+    // Brand
     'C3 Career Consultants',
-    'C3 consultancy Patiala',
+    'Manik Raj Singla',
     
-    // Long-tail Keywords
-    'best career guidance consultancy Patiala',
-    'top competitive exam coaching center Patiala',
-    'best career counsellor in Patiala Punjab',
+    // Long-tail
+    'best career consultancy Patiala Punjab',
+    'top coaching institute Patiala',
     'government exam coaching Patiala',
     
-    // Specific Exams + Location
+    // Specific
     'SSC CGL coaching Patiala',
-    'IBPS PO coaching Patiala',
-    'UPSC civil services Patiala',
-    'CTET coaching Patiala Punjab',
-    
-    // Career Services
-    'career planning consultancy Patiala',
-    'stream selection guidance Patiala',
-    'psychometric assessment Patiala',
-    
-    // Additional Services
-    'motivational speaker Patiala',
-    'corporate training Patiala Punjab',
-    'personality development Patiala',
+    'IBPS coaching Patiala',
+    'career guidance Patiala',
   ],
   authors: [{ name: 'Manik Raj Singla', url: 'https://c3consultants.in/about' }],
   creator: 'C3 Career Consultants',
@@ -78,23 +66,23 @@ export const metadata = {
     type: 'website',
     locale: 'en_IN',
     url: 'https://c3consultants.in',
-    title: 'Best Career Consultancy in Patiala | Expert Guidance by Manik Raj Singla',
-    description: 'Patiala\'s #1 career consultancy. 23+ years excellence, 5000+ students guided, 95% success rate. Best SSC/UPSC/Banking coaching & personalized career guidance in Punjab.',
-    siteName: 'C3 Career Consultants - Best Consultancy in Patiala',
+    title: 'Best Consultancy in Patiala | C3 Career Consultants',
+    description: 'Patiala\'s #1 consultancy. 23+ years, 5000+ students, 95% success. Best career guidance & exam coaching.',
+    siteName: 'C3 Career Consultants - Best Consultancy Patiala',
     images: [
       {
         url: 'https://c3consultants.in/images/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'C3 Career Consultants - Best Consultancy Services in Patiala',
+        alt: 'Best Consultancy Services in Patiala',
         type: 'image/jpeg',
       }
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Best Career Consultancy in Patiala | C3 Consultants',
-    description: 'Top-rated consultancy for career guidance & competitive exams. 23+ years expertise in Patiala, Punjab.',
+    title: 'Best Consultancy in Patiala | C3 Consultants',
+    description: 'Top consultancy for career guidance & competitive exams. 23+ years excellence in Patiala.',
     creator: '@manikrajsingla',
     images: ['https://c3consultants.in/images/twitter-image.jpg'],
   },
@@ -111,36 +99,86 @@ export const metadata = {
     },
   },
   verification: {
-    google: 'your-google-verification-code',
+    google: 'your-google-verification-code-here',
   },
-  category: 'Education & Career Services',
+  category: 'Education',
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
       <head>
-        {/* Enhanced Local SEO Meta Tags */}
+        {/* Enhanced Local SEO */}
         <meta name="geo.region" content="IN-PB" />
         <meta name="geo.placename" content="Patiala, Punjab" />
         <meta name="geo.position" content="30.3398;76.3869" />
         <meta name="ICBM" content="30.3398, 76.3869" />
         
-        {/* Additional Business Info */}
+        {/* Additional Meta */}
         <meta name="rating" content="General" />
+        <meta name="revisit-after" content="7 days" />
         <meta name="distribution" content="Global" />
-        <meta name="coverage" content="Worldwide" />
-        <meta name="target" content="students, professionals, job seekers" />
         
-        {/* Preconnect for performance */}
+        {/* Performance Optimization */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         
         {/* Favicon */}
-        <link rel="icon" href="/images/favicon.ico" />
-        <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        
+        {/* Preload critical resources */}
+        <link rel="preload" as="image" href="/images/c3-logo.jpg" />
       </head>
       <body className="font-sans antialiased bg-white text-neutral-800">
+        {/* Google Analytics - GA4 */}
+        <Script
+          strategy="afterInteractive"
+          src="https://www.googletagmanager.com/gtag/js?id=G-60D0V6YTH2"
+        />
+        <Script
+          id="google-analytics"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-60D0V6YTH2');
+            `,
+          }}
+        />
+
+        {/* Facebook Pixel */}
+        <Script
+          id="facebook-pixel"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              !function(f,b,e,v,n,t,s)
+              {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+              n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+              if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+              n.queue=[];t=b.createElement(e);t.async=!0;
+              t.src=v;s=b.getElementsByTagName(e)[0];
+              s.parentNode.insertBefore(t,s)}(window, document,'script',
+              'https://connect.facebook.net/en_US/fbevents.js');
+              fbq('init', 'YOUR_PIXEL_ID_HERE');
+              fbq('track', 'PageView');
+            `,
+          }}
+        />
+        <noscript>
+          <img
+            height="1"
+            width="1"
+            style={{ display: 'none' }}
+            src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID_HERE&ev=PageView&noscript=1"
+            alt=""
+          />
+        </noscript>
+
         <Header />
         <main className="min-h-screen">
           {children}
