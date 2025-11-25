@@ -33,7 +33,7 @@ const ContactFAQ = () => {
   ];
 
   return (
-    <section ref={ref} className="section-padding bg-gradient-to-b from-neutral-50 to-white">
+    <section ref={ref} className="py-5 bg-gradient-to-b from-neutral-50 to-white">
       <div className="container-custom max-w-4xl">
         {/* Header */}
         <motion.div

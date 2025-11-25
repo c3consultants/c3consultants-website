@@ -8,8 +8,8 @@ const MapLocation = () => {
   const [ref, inView] = useInView({ threshold: 0.2, triggerOnce: true });
 
   return (
-    <section id="location" ref={ref} className="section-padding bg-white overflow-hidden">
-      <div className="container-custom">
+    <section id="location" ref={ref} className="py-5 bg-white overflow-hidden">
+      <div className="max-w-7xl mx-auto">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -36,7 +36,7 @@ const MapLocation = () => {
             transition={{ delay: 0.2, duration: 0.6 }}
             className="lg:col-span-2"
           >
-            <div className="relative h-80 md:h-96 lg:h-[500px] rounded-2xl overflow-hidden shadow-xl border-2 border-neutral-200">
+            <div className="relative h-80 md:h-96 lg:h-[650px] rounded-2xl overflow-hidden shadow-xl border-2 border-neutral-200">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3391.0208826267896!2d76.38956392346888!3d30.328431471540446!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3910294e59f85d59%3A0xa4d4df4643324d4d!2sC3%20Career%20Consultants!5e0!3m2!1sen!2sin!4v1699000000000"
                 width="100%"

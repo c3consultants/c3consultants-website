@@ -213,13 +213,6 @@ const ResultsCarousel = () => {
                       </div>
                     </div>
 
-                    {/* Rating - Top Left */}
-                    <div className="absolute top-4 md:top-6 left-4 md:left-6 z-20 flex space-x-1 bg-white/20 backdrop-blur-sm px-3 py-1.5 rounded-lg">
-                      {[...Array(current.rating)].map((_, i) => (
-                        <HiStar key={i} className="w-4 h-4 text-accent-300" />
-                      ))}
-                    </div>
-
                     {/* Bottom Info */}
                     <div className="absolute bottom-0 left-0 right-0 p-4 md:p-6 bg-gradient-to-t from-black/90 via-black/60 to-transparent">
                       <div className="flex items-center gap-2 mb-2">
@@ -281,7 +274,7 @@ const ResultsCarousel = () => {
                             onClick={() => handleManualNavigation(index)}
                             className={`transition-all duration-200 rounded-full ${
                               currentIndex === index
-                                ? 'w-8 h-2.5 bg-gradient-to-r from-primary-600 to-accent-500'
+                                ? 'w-2.5 h-2.5 bg-gradient-to-r from-primary-600 to-accent-500'
                                 : 'w-2.5 h-2.5 bg-neutral-300 hover:bg-neutral-400'
                             }`}
                             aria-label={`Result ${index + 1}`}

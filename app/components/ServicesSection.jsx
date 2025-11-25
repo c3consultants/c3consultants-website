@@ -120,7 +120,7 @@ const ServicesSection = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ delay: 0.6, duration: 0.6 }}
-          className="text-center mt-10"
+          className="text-center mt-5"
         >
           <p className="text-neutral-700 mb-6 text-base md:text-lg">
             Not sure which service is right for you?
@@ -129,7 +129,7 @@ const ServicesSection = () => {
             href="/contact"
             className="inline-flex items-center justify-center px-8 py-3 md:py-4 bg-gradient-to-r from-primary-600 to-primary-700 text-white font-bold rounded-lg shadow-lg-navy hover:shadow-xl-navy transform hover:scale-105 transition-all duration-300"
           >
-            Schedule a Free Consultation
+            Schedule a Consultation
           </a>
         </motion.div>
       </div>

@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import Image from 'next/image';
@@ -36,6 +36,8 @@ const CareerCounsellingPage = () => {
     '/images/career6.jpg',
     '/images/career7.jpg',
     '/images/career8.jpg',
+    '/images/career9.jpg',
+    '/images/career10.jpg',
   ];
 
   const features = [
@@ -411,12 +413,6 @@ const CareerCounsellingPage = () => {
                   className="object-contain"
                 />
               </div>
-
-              {/* Swipe Indicator */}
-              <div className="absolute -bottom-12 left-1/2 transform -translate-x-1/2 flex items-center space-x-4 text-white/70 text-sm">
-                <span>← Swipe to navigate →</span>
-              </div>
-
               {/* Image Counter */}
               <div className="absolute top-4 left-1/2 transform -translate-x-1/2 px-4 py-2 bg-black/50 backdrop-blur-sm rounded-full text-white text-sm font-semibold">
                 {galleryImages.indexOf(selectedImage) + 1} / {galleryImages.length}

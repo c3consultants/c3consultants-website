@@ -54,7 +54,7 @@ const Footer = () => {
     {
       icon: HiLocationMarker,
       title: 'Location',
-      value: 'Patiala, Punjab, India',
+      value: 'Old Grain Market, Nabha Gate Rd, Patiala',
     },
     {
       icon: HiPhone,

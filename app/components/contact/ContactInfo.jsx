@@ -22,7 +22,7 @@ const ContactInfo = () => {
       title: 'Email',
       value: 'manikrajsingla@gmail.com',
       subtext: 'We reply within 24 hours',
-      href: 'mailto:contact@c3consultants.in',
+      href: 'mailto:manikrajsingla@gmail.com',
       action: 'Send Email',
     },
     {
@@ -62,8 +62,8 @@ const ContactInfo = () => {
   };
 
   return (
-    <section ref={ref} className="section-padding bg-gradient-to-br from-primary-50 to-neutral-50  overflow-hidden">
-      <div className="container-custom max-w-2xl lg:max-w-none">
+    <section ref={ref} className="pt-10 pb-5 bg-gradient-to-br from-primary-50 to-neutral-50  overflow-hidden">
+      <div className="mx-auto max-w-2xl lg:max-w-none">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
