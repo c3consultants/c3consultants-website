@@ -1,26 +1,34 @@
 'use client';
 
 import Script from 'next/script';
+import { Suspense } from 'react';
 import { usePathname, useSearchParams } from 'next/navigation';
 import { useEffect } from 'react';
 
 const GA_MEASUREMENT_ID = 'G-60D0V6YTH2';
 
-export default function GoogleAnalytics() {
+// Separate component for page view tracking
+function PageViewTracker() {
   const pathname = usePathname();
   const searchParams = useSearchParams();
 
   useEffect(() => {
-    if (pathname) {
+    if (pathname && typeof window !== 'undefined' && window.gtag) {
       // Track page views
+      const url = pathname + (searchParams.toString() ? `?${searchParams.toString()}` : '');
       window.gtag('config', GA_MEASUREMENT_ID, {
-        page_path: pathname + searchParams.toString(),
+        page_path: url,
       });
     }
   }, [pathname, searchParams]);
 
+  return null;
+}
+
+export default function GoogleAnalytics() {
   return (
     <>
+      {/* Google Analytics Scripts */}
       <Script
         strategy="afterInteractive"
         src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
@@ -40,6 +48,11 @@ export default function GoogleAnalytics() {
           `,
         }}
       />
+
+      {/* Page View Tracker wrapped in Suspense */}
+      <Suspense fallback={null}>
+        <PageViewTracker />
+      </Suspense>
 
       {/* Facebook Pixel */}
       <Script

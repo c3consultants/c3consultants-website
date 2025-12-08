@@ -5,6 +5,9 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { HiHome, HiArrowLeft } from 'react-icons/hi';
 
+// Force dynamic rendering to prevent prerendering issues
+export const dynamic = 'force-dynamic';
+
 export default function NotFound() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-primary-900 via-primary-800 to-neutral-900 flex items-center justify-center px-4 py-20 relative overflow-hidden">
@@ -97,7 +100,13 @@ export default function NotFound() {
                 <span>Go Home</span>
               </Link>
               <button
-                onClick={() => window.history.back()}
+                onClick={() => {
+                  if (typeof window !== 'undefined' && window.history.length > 1) {
+                    window.history.back();
+                  } else {
+                    window.location.href = '/';
+                  }
+                }}
                 className="inline-flex items-center justify-center space-x-2 px-7 py-3 bg-white/10 backdrop-blur-md border-2 border-white text-white hover:bg-white hover:text-primary-600 font-bold rounded-lg transition-all duration-300"
               >
                 <HiArrowLeft className="w-5 h-5" />
