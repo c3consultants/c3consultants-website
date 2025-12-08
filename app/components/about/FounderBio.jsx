@@ -110,9 +110,9 @@ const FounderBio = () => {
                 <motion.div
                   key={index}
                   whileHover={{ scale: 1.05, y: -5 }}
-                  className="bg-gradient-to-br from-neutral-50 to-white border-2 border-neutral-200 rounded-xl p-4 text-center hover:border-primary-500 hover:shadow-lg transition-all duration-300"
+                  className="bg-gradient-to-br from-neutral-50 to-white border-2 border-neutral-200 rounded-xl p-4 text-center hover:border-primary-500 hover:shadow-lg transition-all duration-300 flex justify-center flex-col items-center"
                 >
-                  <p className={`text-2xl md:text-3xl font-bold ${achievement.color} mb-1`}>
+                  <p className={`text-xl md:text-3xl font-bold ${achievement.color} mb-1`}>
                     {achievement.number}
                   </p>
                   <p className="text-neutral-600 text-xs font-medium leading-tight">

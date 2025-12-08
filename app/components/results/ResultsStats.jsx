@@ -35,7 +35,7 @@ const ResultsStats = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ delay: index * 0.1, duration: 0.5 }}
-                className="bg-white/10 backdrop-blur-md rounded-2xl p-6 text-center hover:bg-white/20 transition-all border border-white/20"
+                className="bg-white/10 backdrop-blur-md rounded-2xl p-6 text-center hover:bg-white/20 transition-all border border-white/20 flex flex-col items-center justify-center"
               >
                 <div className={`w-16 h-16 bg-gradient-to-br ${stat.color} rounded-full flex items-center justify-center mx-auto mb-4 shadow-xl`}>
                   <Icon className="w-8 h-8 text-white" />
