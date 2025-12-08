@@ -1,6 +1,47 @@
+# robots.txt for C3 Career Consultants - Career Counselling in Patiala
+# https://c3consultants.in
+
+# Allow all search engines
 User-agent: *
 Allow: /
+Allow: /about
+Allow: /awards
+Allow: /results
+Allow: /gallery
+Allow: /contact
+Allow: /services/
+Allow: /services/career-counselling
+Allow: /services/competitive-exams
+Allow: /services/motivational-speaking
+
+# Disallow admin and API routes
 Disallow: /api/
 Disallow: /_next/
+Disallow: /admin/
+Disallow: /private/
 
+# Disallow search result pages if you have them
+Disallow: /search?
+
+# Allow CSS and JS
+Allow: /*.css$
+Allow: /*.js$
+
+# Sitemaps
 Sitemap: https://c3consultants.in/sitemap.xml
+
+# Crawl-delay for polite bots (optional)
+# Crawl-delay: 1
+
+# Specific bot instructions (optional - only if needed)
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 1

@@ -4,28 +4,41 @@ import AboutPreview from '@/app/components/AboutPreview';
 import ServicesSection from '@/app/components/ServicesSection';
 import CTASection from '@/app/components/CTASection';
 import AchievementShowcase from '@/app/components/AchievementShowcase';
+import YouTubeVideos from '@/app/components/YouTubeVideos';
 
 export const metadata = {
-  title: 'Best Consultancy Patiala | Top Career Guidance & Coaching',
-  description: 'Best consultancy in Patiala - C3 by Manik Raj Singla. 23+ years, 5000+ students, 95% success. Expert SSC, UPSC, Banking coaching. Free consultation: 9781312020',
+  title: 'Career Counselling in Patiala | Best Consultancy',
+  description: 'Expert career counselling in Patiala by C3 Consultants. 23+ years, 50,000+ students guided. SSC, UPSC, Banking coaching. Call 8837604639 for free session.',
   keywords: [
+    // Primary Target Keywords
+    'career counselling in Patiala',
+    'career counselling Patiala',
+    'best career counselling Patiala',
+    'career counsellor in Patiala',
+    'career guidance Patiala',
+    
+    // Secondary Keywords
     'best consultancy in Patiala',
-    'best consultancy Patiala',
     'career consultancy Patiala',
-    'top consultancy Patiala Punjab',
+    'psychometric test Patiala',
+    'stream selection Patiala',
+    
+    // Service Keywords
     'competitive exam coaching Patiala',
     'SSC coaching Patiala',
     'UPSC coaching Patiala',
-    'best career counsellor Patiala',
-    'Manik Raj Singla',
-    'C3 Career Consultants',
+    'banking exam coaching Patiala',
+    
+    // Brand Keywords
+    'C3 Career Consultants Patiala',
+    'Manik Raj Singla career counsellor',
   ],
   alternates: {
     canonical: 'https://c3consultants.in',
   },
   openGraph: {
-    title: 'Best Consultancy in Patiala | C3 Career Consultants',
-    description: 'Patiala\'s #1 consultancy. 23+ years, 5000+ students, 95% success. Best career guidance & exam coaching.',
+    title: 'Career Counselling in Patiala | C3 Consultants',
+    description: 'Expert career counselling in Patiala. 23+ years, 50,000+ students guided. Best SSC/UPSC coaching.',
     url: 'https://c3consultants.in',
     type: 'website',
     locale: 'en_IN',
@@ -35,15 +48,15 @@ export const metadata = {
         url: 'https://c3consultants.in/images/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Best Consultancy in Patiala',
+        alt: 'Best Career Counselling in Patiala - C3 Consultants',
         type: 'image/jpeg',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Best Consultancy in Patiala | C3 Consultants',
-    description: 'Top consultancy for career guidance & competitive exams. 23+ years excellence.',
+    title: 'Career Counselling in Patiala | C3 Consultants',
+    description: 'Expert career counselling & exam coaching. 23+ years excellence in Patiala.',
     creator: '@manikrajsingla',
     images: ['https://c3consultants.in/images/twitter-image.jpg'],
   },
@@ -60,17 +73,17 @@ export const metadata = {
 };
 
 export default function Home() {
-  // Primary Local Business Schema
+  // Primary Local Business Schema - Career Counselling Focus
   const localBusinessSchema = {
     '@context': 'https://schema.org',
     '@type': 'ProfessionalService',
     '@id': 'https://c3consultants.in/#organization',
-    name: 'C3 Career Consultants - Best Consultancy in Patiala',
-    alternateName: ['C3 Consultants', 'Best Consultancy Patiala'],
+    name: 'C3 Career Consultants - Career Counselling in Patiala',
+    alternateName: ['C3 Consultants', 'Best Career Counselling Patiala', 'Career Counsellor Patiala'],
     image: 'https://c3consultants.in/images/c3-logo.jpg',
-    description: 'Best consultancy in Patiala offering career guidance, SSC coaching, UPSC coaching, banking exam preparation. 23+ years excellence, 5000+ students guided.',
+    description: 'Leading career counselling service in Patiala offering expert career guidance, psychometric assessments, SSC coaching, UPSC coaching, and banking exam preparation. 23+ years excellence, 50,000+ students guided.',
     url: 'https://c3consultants.in',
-    telephone: '+919781312020',
+    telephone: '+918837604639',
     email: 'manikrajsingla@gmail.com',
     priceRange: '$$',
     currenciesAccepted: 'INR',
@@ -110,7 +123,7 @@ export default function Home() {
       '@type': 'Person',
       name: 'Manik Raj Singla',
       jobTitle: 'Career Counsellor & Founder',
-      description: 'Best career counsellor in Patiala with 23+ years experience',
+      description: 'Expert career counsellor in Patiala with 23+ years of experience in career guidance and competitive exam coaching',
     },
     aggregateRating: {
       '@type': 'AggregateRating',
@@ -128,14 +141,22 @@ export default function Home() {
     ],
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
-      name: 'Best Consultancy Services',
+      name: 'Career Counselling & Coaching Services in Patiala',
       itemListElement: [
         {
           '@type': 'Offer',
           itemOffered: {
             '@type': 'Service',
-            name: 'Career Counselling',
-            description: 'Best career guidance in Patiala',
+            name: 'Career Counselling in Patiala',
+            description: 'Expert career counselling with psychometric assessments and personalized guidance',
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Stream Selection Guidance',
+            description: 'Career counselling for 10th and 12th class students in Patiala',
           },
         },
         {
@@ -143,7 +164,7 @@ export default function Home() {
           itemOffered: {
             '@type': 'Service',
             name: 'SSC Coaching',
-            description: 'Top SSC exam coaching in Patiala',
+            description: 'Top SSC exam coaching with career counselling in Patiala',
           },
         },
         {
@@ -151,7 +172,7 @@ export default function Home() {
           itemOffered: {
             '@type': 'Service',
             name: 'UPSC Coaching',
-            description: 'Best UPSC preparation in Patiala',
+            description: 'Best UPSC preparation with career counselling support',
           },
         },
         {
@@ -159,7 +180,7 @@ export default function Home() {
           itemOffered: {
             '@type': 'Service',
             name: 'Banking Exam Coaching',
-            description: 'Expert banking exam coaching',
+            description: 'Expert banking exam coaching with career guidance',
           },
         },
       ],
@@ -170,10 +191,10 @@ export default function Home() {
   const educationalSchema = {
     '@context': 'https://schema.org',
     '@type': 'EducationalOrganization',
-    name: 'C3 Career Consultants',
-    description: 'Best consultancy and coaching for competitive exams in Patiala',
+    name: 'C3 Career Consultants - Career Counselling Patiala',
+    description: 'Premier career counselling and competitive exam coaching institute in Patiala',
     url: 'https://c3consultants.in',
-    telephone: '+919781312020',
+    telephone: '+918837604639',
     address: {
       '@type': 'PostalAddress',
       streetAddress: 'SCO 4, Old Grain Market',
@@ -198,49 +219,49 @@ export default function Home() {
     ],
   };
 
-  // FAQ Schema - UNIQUE for Home page
+  // FAQ Schema - Career Counselling Focused
   const faqSchema = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
     mainEntity: [
       {
         '@type': 'Question',
-        name: 'Which is the best consultancy in Patiala?',
+        name: 'Where can I get career counselling in Patiala?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'C3 Career Consultants is the best consultancy in Patiala, founded by Manik Raj Singla with 23+ years of experience. We have successfully guided 5000+ students with a 95% success rate in career counselling and competitive exam preparation including SSC, UPSC, and Banking exams.',
+          text: 'C3 Career Consultants provides expert career counselling in Patiala. Founded by Manik Raj Singla with 23+ years of experience, we have successfully guided 50,000+ students through comprehensive career counselling services including psychometric assessments, stream selection, and course guidance.',
         },
       },
       {
         '@type': 'Question',
-        name: 'What makes C3 the best consultancy in Patiala?',
+        name: 'Who is the best career counsellor in Patiala?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'C3 is the best consultancy in Patiala because of: 23+ years of proven excellence, 5000+ students successfully guided, 95% success rate, expert faculty, personalized attention, comprehensive SSC/UPSC/Banking coaching, and founded by award-winning career counsellor Manik Raj Singla.',
+          text: 'Manik Raj Singla is the best career counsellor in Patiala with 23+ years of experience. He offers personalized career counselling at C3 Career Consultants with a 95% success rate, helping students choose the right career path through psychometric tests and expert guidance.',
         },
       },
       {
         '@type': 'Question',
-        name: 'What services does the best consultancy in Patiala offer?',
+        name: 'What services are included in career counselling at C3 Patiala?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'C3 Career Consultants, the best consultancy in Patiala, offers: Career counselling, psychometric assessments, SSC coaching (CGL, CHSL, MTS), UPSC coaching, Banking exam preparation (IBPS, SBI), CTET coaching, motivational speaking, and personality development programs.',
+          text: 'Career counselling at C3 Patiala includes: Psychometric assessments, aptitude tests, stream selection for 10th/12th students, course selection guidance, career roadmap planning, skill assessment, competitive exam guidance (SSC, UPSC, Banking), and personalized one-on-one counselling sessions.',
         },
       },
       {
         '@type': 'Question',
-        name: 'Where is the best consultancy in Patiala located?',
+        name: 'How much does career counselling cost in Patiala?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'The best consultancy in Patiala - C3 Career Consultants is located at SCO 4, Old Grain Market, Patiala, Punjab 147001. Contact: +91 9781312020. Open Monday-Saturday, 9 AM-6 PM. Free consultation available.',
+          text: 'C3 Career Consultants offers free initial career counselling session in Patiala. Our comprehensive career counselling packages are affordable and include psychometric tests, detailed reports, and personalized guidance. Contact +91 8837604639 for pricing details.',
         },
       },
       {
         '@type': 'Question',
-        name: 'What is the success rate of C3 Consultants Patiala?',
+        name: 'Why choose C3 for career counselling in Patiala?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'C3 Career Consultants, the best consultancy in Patiala, maintains a 95% success rate with 1000+ selections in SSC, UPSC, Banking, and other government exams. Our proven track record makes us the top choice for competitive exam coaching in Punjab.',
+          text: 'Choose C3 for career counselling in Patiala because of: 23+ years expertise, 50,000+ students guided, 95% success rate, scientific psychometric assessments, personalized attention, expert career counsellor Manik Raj Singla, proven track record, and comprehensive support for SSC, UPSC, and Banking exam aspirants.',
         },
       },
     ],
@@ -250,9 +271,9 @@ export default function Home() {
   const websiteSchema = {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    name: 'C3 Career Consultants - Best Consultancy Patiala',
+    name: 'C3 Career Consultants - Career Counselling Patiala',
     url: 'https://c3consultants.in',
-    description: 'Best consultancy in Patiala for career guidance and competitive exam coaching',
+    description: 'Best career counselling in Patiala for students seeking expert guidance and competitive exam coaching',
     publisher: {
       '@type': 'Organization',
       name: 'C3 Career Consultants',
@@ -297,6 +318,7 @@ export default function Home() {
         <AboutPreview />
         <ServicesSection />
         <AchievementShowcase />
+        <YouTubeVideos />
         <CTASection />
       </main>
     </>

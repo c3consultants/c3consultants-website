@@ -8,7 +8,7 @@ const ResultsStats = () => {
   const [ref, inView] = useInView({ threshold: 0.2, triggerOnce: true });
 
   const stats = [
-    { icon: HiUserGroup, number: '5000+', label: 'Students Guided', color: 'from-blue-500 to-blue-600' },
+    { icon: HiUserGroup, number: '50,000+', label: 'Students Guided', color: 'from-blue-500 to-blue-600' },
     { icon: HiBadgeCheck, number: '1000+', label: 'Total Selections', color: 'from-green-500 to-green-600' },
     { icon: HiAcademicCap, number: '500+', label: 'SSC Selections', color: 'from-purple-500 to-purple-600' },
     { icon: HiTrendingUp, number: '95%', label: 'Success Rate', color: 'from-accent-500 to-accent-600' },

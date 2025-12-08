@@ -12,7 +12,7 @@ const ContactFAQ = () => {
   const faqs = [
     {
       question: 'How can I book a consultation?',
-      answer: 'You can book a consultation by filling out the contact form above, calling us at +91 9781312020, or visiting our office directly. We offer both in-person and online consultations.',
+      answer: 'You can book a consultation by filling out the contact form above, calling us at +91 8837604639, or visiting our office directly. We offer both in-person and online consultations.',
     },
     {
       question: 'What services do you provide?',
@@ -112,10 +112,10 @@ const ContactFAQ = () => {
         >
           <p className="text-neutral-600 mb-4">Still have questions?</p>
           <a
-            href="tel:+919781312020"
+            href="tel:+918837604639"
             className="inline-block px-7 py-3 bg-primary-600 hover:bg-primary-700 text-white font-bold rounded-lg transition-colors shadow-lg"
           >
-            Call Us: +91 9781312020
+            Call Us: +91 8837604639
           </a>
         </motion.div>
       </div>

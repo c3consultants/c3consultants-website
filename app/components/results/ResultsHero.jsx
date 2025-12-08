@@ -39,7 +39,7 @@ const ResultsHero = () => {
           {/* Stats */}
           <div className="grid grid-cols-3 gap-6 md:gap-12 pt-8">
             {[
-              { icon: HiAcademicCap, number: '5000+', label: 'Students Guided' },
+              { icon: HiAcademicCap, number: '50,000+', label: 'Students Guided' },
               { icon: HiBadgeCheck, number: '1000+', label: 'Selections' },
               { icon: HiTrendingUp, number: '95%', label: 'Success Rate' },
             ].map((stat, index) => {

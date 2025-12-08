@@ -16,7 +16,7 @@ const Hero = () => {
           fill
           className="object-cover object-center"
           priority
-          quality={75}
+          quality={70}
           sizes="100vw"
         />
         {/* Gradient overlay */}

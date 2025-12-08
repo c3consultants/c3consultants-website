@@ -1,0 +1,24 @@
+/* TEAM */
+Founder & Career Counsellor: Manik Raj Singla
+Contact: manikrajsingla@gmail.com
+Location: Patiala, Punjab, India
+
+/* SITE */
+Last update: December 2025
+Standards: HTML5, CSS3, JavaScript ES6+
+Components: Next.js 14, React 18
+Software: Visual Studio Code, Git
+
+/* THANKS */
+To the 50,000+ students who trusted us with their career dreams
+To Rotary International for recognizing our community service
+To the Government of Punjab for acknowledging our contribution
+
+/* CAREER COUNSELLING SERVICES */
+Career Counselling in Patiala
+Psychometric Assessments
+Stream Selection Guidance
+Competitive Exam Coaching
+Motivational Speaking
+
+Best Career Counsellor in Patiala since 2002

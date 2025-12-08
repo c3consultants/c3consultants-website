@@ -7,26 +7,25 @@ import ValuesSection from '@/app/components/about/ValuesSection';
 import CTASection from '@/app/components/CTASection';
 
 export const metadata = {
-  title: 'About Manik Raj Singla | Best Consultancy Patiala',
-  description: 'Founder of C3 - Patiala\'s best consultancy. 23+ years, 5000+ students guided, 95% success. Expert career guidance & competitive exam coaching.',
+  title: 'About Manik Raj Singla | Career Counsellor Patiala',
+  description: 'Manik Raj Singla - Expert career counsellor in Patiala. 23+ years in career counselling, 50,000+ students guided, 95% success. Founder of C3.',
   keywords: [
-    'Manik Raj Singla',
-    'best consultancy in Patiala',
-    'career consultancy Patiala',
-    'top career counsellor Patiala',
-    'C3 Career Consultants Patiala',
-    'best career guidance Patiala Punjab',
-    'experienced career consultant Patiala',
-    'competitive exam coaching Patiala',
+    'Manik Raj Singla career counsellor',
+    'career counsellor in Patiala',
+    'best career counsellor Patiala',
+    'career counselling expert Patiala',
+    'C3 Career Consultants founder',
+    'experienced career counsellor Punjab',
     'Manik Raj Singla biography',
-    'career counselling expert Punjab',
+    'top career counsellor Patiala',
+    'career guidance expert Patiala',
   ],
   alternates: {
     canonical: 'https://c3consultants.in/about',
   },
   openGraph: {
-    title: 'About Manik Raj Singla | Best Consultancy Patiala',
-    description: '23+ years excellence. Patiala\'s most trusted consultancy with 5000+ students guided.',
+    title: 'About Manik Raj Singla | Career Counsellor Patiala',
+    description: 'Expert career counsellor with 23+ years experience. 50,000+ students guided through career counselling in Patiala.',
     url: 'https://c3consultants.in/about',
     type: 'profile',
     locale: 'en_IN',
@@ -36,14 +35,14 @@ export const metadata = {
         url: 'https://c3consultants.in/images/manik-raj-singla.jpg',
         width: 1200,
         height: 630,
-        alt: 'Manik Raj Singla - Best Career Counsellor Patiala',
+        alt: 'Manik Raj Singla - Career Counsellor Patiala',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'About Manik Raj Singla | Best Consultancy Patiala',
-    description: '23+ years excellence. Best consultancy services in Patiala for career guidance.',
+    title: 'About Manik Raj Singla | Career Counsellor Patiala',
+    description: '23+ years in career counselling. 50,000+ students guided in Patiala.',
     creator: '@manikrajsingla',
   },
   robots: {
@@ -59,7 +58,7 @@ export const metadata = {
 };
 
 export default function AboutPage() {
-  // Consolidated Person Schema (PRIMARY - use only here)
+  // Consolidated Person Schema
   const personSchema = {
     '@context': 'https://schema.org',
     '@type': 'Person',
@@ -67,12 +66,12 @@ export default function AboutPage() {
     url: 'https://c3consultants.in/about',
     image: 'https://c3consultants.in/images/manik-raj-singla.jpg',
     jobTitle: 'Career Counsellor & Founder',
-    description: 'Leading career consultancy expert in Patiala with 23+ years of experience in career guidance, competitive exam coaching (SSC, UPSC, Banking), and motivational speaking.',
+    description: 'Leading career counsellor in Patiala with 23+ years of experience in career counselling, psychometric assessments, competitive exam coaching (SSC, UPSC, Banking), and motivational speaking.',
     worksFor: {
       '@type': 'Organization',
       name: 'C3 Career Consultants',
       url: 'https://c3consultants.in',
-      description: 'Best consultancy services in Patiala for career guidance and competitive exams',
+      description: 'Best career counselling services in Patiala',
     },
     alumniOf: [
       {
@@ -88,7 +87,7 @@ export default function AboutPage() {
       postalCode: '147001',
       addressCountry: 'IN',
     },
-    telephone: '+919781312020',
+    telephone: '+918837604639',
     email: 'manikrajsingla@gmail.com',
     sameAs: [
       'https://www.facebook.com/manikrajsingla.CareerConsultant',
@@ -98,13 +97,14 @@ export default function AboutPage() {
     ],
     knowsAbout: [
       'Career Counselling',
-      'Career Consultancy',
+      'Career Guidance',
+      'Psychometric Assessments',
       'SSC Exam Preparation',
       'UPSC Coaching',
       'Banking Exam Coaching',
-      'Competitive Exams',
+      'Stream Selection',
+      'Course Selection',
       'Motivational Speaking',
-      'Leadership Training',
     ],
     award: [
       'Rotary Visionary Leadership Award 2024',
@@ -117,13 +117,13 @@ export default function AboutPage() {
   const aboutPageSchema = {
     '@context': 'https://schema.org',
     '@type': 'AboutPage',
-    name: 'About C3 Career Consultants - Best Consultancy in Patiala',
-    description: 'Leading career consultancy in Patiala since 2002. Expert guidance for career planning and competitive exam coaching with 23+ years of excellence.',
+    name: 'About C3 Career Consultants - Career Counselling in Patiala',
+    description: 'Leading career counselling service in Patiala since 2002. Expert guidance for career planning through psychometric tests and personalized counselling.',
     url: 'https://c3consultants.in/about',
     mainEntity: {
       '@type': 'ProfessionalService',
       name: 'C3 Career Consultants',
-      description: 'Best consultancy services in Patiala for career guidance, competitive exam coaching (SSC, UPSC, Banking), and motivational speaking',
+      description: 'Best career counselling services in Patiala offering psychometric assessments, stream selection, competitive exam coaching',
       foundingDate: '2002',
       founder: {
         '@type': 'Person',
@@ -140,10 +140,6 @@ export default function AboutPage() {
       areaServed: {
         '@type': 'City',
         name: 'Patiala',
-        containedIn: {
-          '@type': 'State',
-          name: 'Punjab',
-        },
       },
     },
   };
@@ -168,6 +164,30 @@ export default function AboutPage() {
     ],
   };
 
+  // FAQ Schema
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'Who is Manik Raj Singla?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Manik Raj Singla is the best career counsellor in Patiala with 23+ years of experience in career counselling. He has successfully guided 50,000+ students through psychometric assessments, stream selection, and career planning. Founder of C3 Career Consultants.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'What makes Manik Raj Singla a leading career counsellor in Patiala?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Manik Raj Singla is a leading career counsellor in Patiala because of: 23+ years expertise in career counselling, MBA in Career Counselling, 50,000+ students guided, 95% success rate, 15+ awards, expert in psychometric assessments, and personalized career guidance approach.',
+        },
+      },
+    ],
+  };
+
   return (
     <>
       {/* Structured Data */}
@@ -182,6 +202,10 @@ export default function AboutPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
       <AboutHero />

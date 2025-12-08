@@ -22,7 +22,7 @@ const HeroCarousel = () => {
         'Psychometric assessments',
         'Career roadmap planning',
       ],
-      highlight: 'Trusted by 5000+ Students',
+      highlight: 'Trusted by 50,000+ Students',
       icon: HiAcademicCap,
       backgroundImage: '/images/hero1.jpg',
       ctaText: 'Start Your Journey',
@@ -56,7 +56,7 @@ const HeroCarousel = () => {
       ],
       highlight: '100+ Successful Workshops',
       icon: HiUsers,
-      backgroundImage: '/images/hero2.jpg',
+      backgroundImage: '/images/image2.jpg',
       ctaText: 'Book a Session',
       ctaLink: '/services/motivational-speaking',
     },
@@ -281,7 +281,7 @@ const HeroCarousel = () => {
                       <p className="text-white/90 text-xs md:text-sm mt-1 font-medium">Years Experience</p>
                     </div>
                     <div>
-                      <p className="text-2xl sm:text-3xl lg:text-3xl xl:text-4xl font-bold text-white drop-shadow-lg">5000+</p>
+                      <p className="text-2xl sm:text-3xl lg:text-3xl xl:text-4xl font-bold text-white drop-shadow-lg">50,000+</p>
                       <p className="text-white/90 text-xs md:text-sm mt-1 font-medium">Students Guided</p>
                     </div>
                     <div>

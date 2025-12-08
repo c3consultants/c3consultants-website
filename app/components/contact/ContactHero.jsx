@@ -8,8 +8,8 @@ const ContactHero = () => {
     {
       icon: HiPhone,
       title: 'Call Us',
-      value: '+91 9781312020',
-      href: 'tel:+919781312020',
+      value: '+91 8837604639',
+      href: 'tel:+918837604639',
     },
     {
       icon: HiMail,

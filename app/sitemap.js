@@ -10,16 +10,16 @@ export default function sitemap() {
       priority: 1.0,
     },
     {
+      url: `${baseUrl}/services/career-counselling`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.95, // Highest priority for main service
+    },
+    {
       url: `${baseUrl}/about`,
       lastModified: currentDate,
       changeFrequency: 'monthly',
       priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/awards`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly',
-      priority: 0.85,
     },
     {
       url: `${baseUrl}/results`,
@@ -28,28 +28,34 @@ export default function sitemap() {
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/services/career-counselling`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly',
-      priority: 0.95,
-    },
-    {
       url: `${baseUrl}/services/competitive-exams`,
       lastModified: currentDate,
       changeFrequency: 'weekly',
-      priority: 0.95,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/awards`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.85,
     },
     {
       url: `${baseUrl}/services/motivational-speaking`,
       lastModified: currentDate,
       changeFrequency: 'weekly',
-      priority: 0.85,
+      priority: 0.8,
     },
     {
       url: `${baseUrl}/contact`,
       lastModified: currentDate,
       changeFrequency: 'monthly',
       priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/gallery`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.7,
     },
   ];
 }

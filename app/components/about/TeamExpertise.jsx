@@ -19,7 +19,7 @@ const TeamExpertise = () => {
         'One-on-one expert guidance sessions',
       ],
       color: 'from-primary-600 to-primary-500',
-      stat: '5000+',
+      stat: '50,000+',
       statLabel: 'Students Guided',
     },
     {

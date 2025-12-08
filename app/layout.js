@@ -19,28 +19,41 @@ const playfair = Playfair_Display({
 export const metadata = {
   metadataBase: new URL('https://c3consultants.in'),
   title: {
-    default: 'Best Consultancy Patiala | C3 Career Consultants',
-    template: '%s | C3 Consultants Patiala'
+    default: 'Career Counselling in Patiala | C3 Consultants',
+    template: '%s | C3 Career Counselling Patiala'
   },
-  description: 'Best consultancy in Patiala for career guidance & competitive exams. C3 by Manik Raj Singla - 23+ years, 5000+ students, 95% success. SSC, UPSC, Banking coaching.',
+  description: 'Expert career counselling in Patiala by C3 Consultants. 23+ years, 50,000+ students guided. Psychometric tests, stream selection, SSC/UPSC coaching. Call 8837604639',
   keywords: [
-    'best consultancy in Patiala',
-    'best consultancy Patiala',
-    'top consultancy Patiala',
-    'career consultancy Patiala',
+    // Primary Keywords - Career Counselling Focus
+    'career counselling in Patiala',
+    'career counselling Patiala',
     'best career counselling Patiala',
+    'career counsellor in Patiala',
+    'career counsellor Patiala',
+    'career guidance Patiala',
+    
+    // Long-tail Career Counselling Keywords
+    'career counselling after 10th Patiala',
+    'career counselling after 12th Patiala',
+    'career counselling for students Patiala',
+    'psychometric test Patiala',
+    'stream selection Patiala',
+    
+    // Secondary Keywords
+    'best consultancy in Patiala',
+    'career consultancy Patiala',
     'competitive exam coaching Patiala',
+    
+    // Service Keywords
     'SSC coaching Patiala',
     'UPSC coaching Patiala',
     'banking coaching Patiala',
-    'C3 Career Consultants',
-    'Manik Raj Singla',
-    'best career consultancy Patiala Punjab',
-    'top coaching institute Patiala',
     'government exam coaching Patiala',
-    'SSC CGL coaching Patiala',
-    'IBPS coaching Patiala',
-    'career guidance Patiala',
+    
+    // Brand Keywords
+    'C3 Career Consultants Patiala',
+    'Manik Raj Singla career counsellor',
+    'Manik Raj Singla Patiala',
   ],
   authors: [{ name: 'Manik Raj Singla', url: 'https://c3consultants.in/about' }],
   creator: 'C3 Career Consultants',
@@ -57,23 +70,23 @@ export const metadata = {
     type: 'website',
     locale: 'en_IN',
     url: 'https://c3consultants.in',
-    title: 'Best Consultancy in Patiala | C3 Career Consultants',
-    description: 'Patiala\'s #1 consultancy. 23+ years, 5000+ students, 95% success. Best career guidance & exam coaching.',
-    siteName: 'C3 Career Consultants - Best Consultancy Patiala',
+    title: 'Career Counselling in Patiala | C3 Consultants',
+    description: 'Expert career counselling in Patiala. 23+ years, 50,000+ students guided. Best career guidance & exam coaching.',
+    siteName: 'C3 Career Consultants - Career Counselling Patiala',
     images: [
       {
         url: 'https://c3consultants.in/images/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Best Consultancy Services in Patiala',
+        alt: 'Career Counselling in Patiala - C3 Consultants',
         type: 'image/jpeg',
       }
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Best Consultancy in Patiala | C3 Consultants',
-    description: 'Top consultancy for career guidance & competitive exams. 23+ years excellence in Patiala.',
+    title: 'Career Counselling in Patiala | C3 Consultants',
+    description: 'Expert career counselling & exam coaching. 23+ years excellence in Patiala.',
     creator: '@manikrajsingla',
     images: ['https://c3consultants.in/images/twitter-image.jpg'],
   },
@@ -92,14 +105,14 @@ export const metadata = {
   verification: {
     google: 'your-google-verification-code-here',
   },
-  category: 'Education',
+  category: 'Education & Career Services',
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
       <head>
-        {/* Enhanced Local SEO */}
+        {/* Enhanced Local SEO - Career Counselling Focus */}
         <meta name="geo.region" content="IN-PB" />
         <meta name="geo.placename" content="Patiala, Punjab" />
         <meta name="geo.position" content="30.3398;76.3869" />
@@ -109,6 +122,8 @@ export default function RootLayout({ children }) {
         <meta name="rating" content="General" />
         <meta name="revisit-after" content="7 days" />
         <meta name="distribution" content="Global" />
+        <meta name="audience" content="Students, Parents, Job Seekers" />
+        <meta name="target" content="career counselling, students, professionals" />
         
         {/* Performance Optimization */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />

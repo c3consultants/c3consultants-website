@@ -18,7 +18,7 @@ const AchievementShowcase = () => {
       id: 1,
       title: 'Awards & Honours',
       subtitle: 'Recognition & Leadership Excellence',
-      description: 'Celebrating 23+ years of visionary leadership, community service, and transformative impact. From Rotary International awards to government recognition.',
+      description: 'Celebrating 23+ years of visionary leadership, community service. From Rotary International awards to government recognition.',
       image: '/images/achivement1.jpg',
       link: '/awards',
       icon: FiAward,
@@ -39,11 +39,11 @@ const AchievementShowcase = () => {
       title: 'Student Results',
       subtitle: 'Transforming Dreams Into Reality',
       description: 'Real success stories of students who achieved remarkable results. From 93% CBSE scorers to Bank PO selections and UPSC aspirants.',
-      image: '/images/student1.jpg',
+      image: '/images/hero3.jpg',
       link: '/results',
       icon: HiTrendingUp,
       stats: [
-        { number: '5000+', label: 'Students' },
+        { number: '50,000+', label: 'Students' },
         { number: '95%', label: 'Success Rate' },
       ],
       highlights: [
@@ -109,7 +109,7 @@ const AchievementShowcase = () => {
                       fill
                       className="object-cover transition-transform duration-700 group-hover:scale-110"
                       sizes="(max-width: 1024px) 100vw, 50vw"
-                      quality={70}
+                      quality={75}
                     />
                     
                     {/* Gradient Overlay */}

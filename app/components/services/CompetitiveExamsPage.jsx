@@ -207,29 +207,12 @@ const CompetitiveExamsPage = () => {
 
   return (
     <>
-      {/* Hero Section with Background */}
-      <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Background Image */}
-        <div className="absolute inset-0">
-          <div 
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-            style={{
-              backgroundImage: `url('/images/student1.jpg')`,
-            }}
-          />
-           <div className="absolute inset-0 bg-gradient-to-br from-primary-900/70 via-primary-800/65 to-neutral-900/70" />
-        </div>
-
-        {/* Animated Elements */}
-        <motion.div
-          animate={{ 
-            scale: [1, 1.2, 1],
-            opacity: [0.15, 0.25, 0.15],
-          }}
-          transition={{ duration: 8, repeat: Infinity }}
-          className="absolute top-1/4 right-1/4 w-96 h-96 bg-accent-500 rounded-full blur-3xl"
-        />
-        
+      <section className="relative w-full bg-gradient-to-br from-primary-900 via-primary-800 to-neutral-900 overflow-hidden">
+      {/* Animated Background */}
+      <div className="absolute inset-0">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-accent-500/10 rounded-full blur-3xl animate-pulse-slow" />
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-primary-500/10 rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: '2s' }} />
+      </div>
         <div className="container-custom relative z-10 py-20">
           <div className="max-w-5xl mx-auto">
             <motion.div
@@ -291,10 +274,10 @@ const CompetitiveExamsPage = () => {
                   <HiArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <a
-                  href="tel:+919781312020"
+                  href="tel:+918837604639"
                   className="inline-flex items-center justify-center space-x-2 px-7 py-3 bg-white/10 backdrop-blur-md border-2 border-white text-white hover:bg-white hover:text-primary-600 font-bold rounded-xl transition-all duration-300"
                 >
-                  <span className="text-lg">Call: +91 9781312020</span>
+                  <span className="text-lg">Call: +91 8837604639</span>
                 </a>
               </motion.div>
             </motion.div>

@@ -183,7 +183,7 @@ const MotivationalSpeakingPage = () => {
           <div 
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
             style={{
-              backgroundImage: `url('/images/image1.jpg')`,
+              backgroundImage: `url('/images/career7.jpg')`,
             }}
           />
           <div className="absolute inset-0 bg-gradient-to-br from-primary-900/70 via-primary-800/65 to-neutral-900/70" />
@@ -260,10 +260,10 @@ const MotivationalSpeakingPage = () => {
                   <HiArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <a
-                  href="tel:+919781312020"
+                  href="tel:+918837604639"
                   className="inline-flex items-center justify-center space-x-2 px-7 py-3 bg-white/10 backdrop-blur-md border-2 border-white text-white hover:bg-white hover:text-primary-600 font-bold rounded-xl transition-all duration-300"
                 >
-                  <span className="text-lg">Call: +91 9781312020</span>
+                  <span className="text-lg">Call: +91 8837604639</span>
                 </a>
               </motion.div>
             </motion.div>

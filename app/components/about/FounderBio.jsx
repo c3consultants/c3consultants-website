@@ -44,7 +44,7 @@ const FounderBio = () => {
 
   const achievements = [
     { number: '23+', label: 'Years Experience', color: 'text-primary-600' },
-    { number: '5000+', label: 'Lives Transformed', color: 'text-accent-600' },
+    { number: '50000+', label: 'Lives Transformed', color: 'text-accent-600' },
     { number: '95%', label: 'Success Rate', color: 'text-primary-600' },
   ];
 

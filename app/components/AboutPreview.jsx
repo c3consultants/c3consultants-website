@@ -192,7 +192,7 @@ const AboutPreview = () => {
               transition={{ delay: 0.7, duration: 0.5 }}
               className="text-sm text-neutral-600 mt-6 md:mt-8 pt-6 md:pt-8 border-t border-neutral-200"
             >
-              ✓ Trusted by <span className="font-semibold text-primary-600">5000+ students</span> with <span className="font-semibold text-primary-600">95% success rate</span>
+              ✓ Trusted by <span className="font-semibold text-primary-600">50,000+ students</span> with <span className="font-semibold text-primary-600">95% success rate</span>
             </motion.p>
           </motion.div>
         </div>

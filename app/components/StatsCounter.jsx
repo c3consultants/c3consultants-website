@@ -21,7 +21,7 @@ const StatsCounter = () => {
       icon: HiAcademicCap,
     },
     {
-      number: 5000,
+      number: 50000,
       suffix: '+',
       label: 'Students Guided',
       description: 'Successfully transformed careers',

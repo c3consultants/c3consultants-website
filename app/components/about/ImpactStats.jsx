@@ -20,7 +20,7 @@ const ImpactStats = () => {
     },
     {
       icon: HiHeart,
-      number: 5000,
+      number: 50000,
       suffix: '+',
       label: 'Students Transformed',
       description: 'Lives changed through expert guidance',

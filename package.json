@@ -1,6 +1,21 @@
 {
   "name": "c3-career-consultants",
-  "version": "0.1.0",
+  "version": "1.0.0",
+  "description": "Career Counselling in Patiala - Expert guidance by Manik Raj Singla. 23+ years, 50,000+ students. Best career counsellor in Patiala.",
+  "keywords": [
+    "career counselling in Patiala",
+    "career counsellor Patiala",
+    "best career counselling",
+    "SSC coaching Patiala",
+    "UPSC coaching",
+    "career guidance"
+  ],
+  "author": "Manik Raj Singla <manikrajsingla@gmail.com>",
+  "homepage": "https://c3consultants.in",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/c3consultants"
+  },
   "private": true,
   "scripts": {
     "dev": "next dev",

@@ -42,6 +42,7 @@ const Header = () => {
     { name: 'Home', href: '/' },
     { name: 'About', href: '/about' },
     { name: 'Services', href: '#', hasDropdown: true },
+    { name: 'Gallery', href: '/gallery' },
     { name: 'Awards', href: '/awards' },
     { name: 'Results', href: '/results' },
     { name: 'Contact', href: '/contact' },
@@ -93,7 +94,7 @@ const Header = () => {
               />
             </div>
             <div className="hidden md:block">
-              <h1 className={`font-serif text-base lg:text-lg font-bold transition-colors duration-300 ${
+              <h1 className={`font-sans text-base lg:text-lg font-medium transition-colors duration-300 ${
                 isScrolled ? 'text-primary-600' : 'text-white drop-shadow-lg'
               }`}>
                 C3 Career Consultants
@@ -107,7 +108,7 @@ const Header = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-6 xl:space-x-8">
+          <div className="hidden xl:flex items-center space-x-3 xl:space-x-6">
             {navigation.map((item) => (
               <div
                 key={item.name}
@@ -196,15 +197,15 @@ const Header = () => {
           </div>
 
           {/* CTA Buttons - Desktop */}
-          <div className="hidden lg:flex items-center space-x-3">
+          <div className="hidden xl:flex items-center space-x-3">
             <a
-              href="tel:+919781312020"
+              href="tel:+918837604639"
               className={`flex items-center space-x-2 px-4 py-2.5 rounded-lg font-semibold text-sm transition-all duration-300 ${
                 isScrolled ? 'text-primary-600 hover:bg-primary-50' : 'text-white hover:bg-white/15'
               }`}
             >
               <HiPhone className="text-lg" />
-              <span>9781312020</span>
+              <span>8837604639</span>
             </a>
             <Link
               href="/contact"
@@ -221,7 +222,7 @@ const Header = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className={`lg:hidden p-2.5 rounded-lg transition-all duration-300 ${
+            className={`xl:hidden p-2.5 rounded-lg transition-all duration-300 ${
               isScrolled ? 'text-primary-600 hover:bg-primary-50' : 'text-white hover:bg-white/15'
             }`}
             aria-label="Toggle menu"
@@ -241,7 +242,7 @@ const Header = () => {
               exit={{ opacity: 0 }}
               transition={{ duration: 0.2 }}
               onClick={closeMobileMenu}
-              className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden"
+              className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 xl:hidden"
             />
 
             <motion.div
@@ -249,7 +250,7 @@ const Header = () => {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
               transition={{ duration: 0.2 }}
-              className="fixed top-20 left-0 right-0 bg-white rounded-b-3xl shadow-2xl z-40 lg:hidden overflow-y-auto max-h-[calc(100vh-80px)]"
+              className="fixed top-20 left-0 right-0 bg-white rounded-b-3xl shadow-2xl z-40 xl:hidden overflow-y-auto max-h-[calc(100vh-80px)]"
             >
               <div className="container-custom py-6 space-y-2">
                 {/* Navigation Links */}
@@ -325,7 +326,7 @@ const Header = () => {
                 {/* Contact Section */}
                 <div className="pt-2">
                   <a
-                    href="tel:+919781312020"
+                    href="tel:+918837604639"
                     className="flex items-center space-x-3 p-4 mb-3 rounded-xl bg-primary-50 border-2 border-primary-200 hover:border-primary-300 transition-all"
                   >
                     <div className="w-10 h-10 rounded-lg bg-primary-500 flex items-center justify-center">
@@ -333,7 +334,7 @@ const Header = () => {
                     </div>
                     <div>
                       <p className="text-xs text-neutral-600 font-medium">Call Us Now</p>
-                      <p className="text-sm font-bold text-primary-600">+91 9781312020</p>
+                      <p className="text-sm font-bold text-primary-600">+91 8837604639</p>
                     </div>
                   </a>
 
@@ -344,12 +345,6 @@ const Header = () => {
                   >
                     Book Consultation
                   </Link>
-                </div>
-
-                {/* Office Hours */}
-                <div className="border-t border-neutral-200 pt-4">
-                  <p className="text-center text-xs text-neutral-500">Mon - Sat: 9:00 AM - 6:00 PM</p>
-                  <p className="text-center text-xs text-neutral-500 mt-1">Sunday: Closed</p>
                 </div>
               </div>
             </motion.div>

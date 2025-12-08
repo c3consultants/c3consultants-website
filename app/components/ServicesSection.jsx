@@ -34,7 +34,7 @@ const ServicesSection = () => {
       ],
       icon: HiLightBulb,
       link: '/services/competitive-exams',
-      image: '/images/image3.jpg',
+      image: '/images/exams.png',
     },
     {
       title: 'Motivational Training',

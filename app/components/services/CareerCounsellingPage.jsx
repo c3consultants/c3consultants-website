@@ -198,7 +198,7 @@ const CareerCounsellingPage = () => {
       <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="/images/image1.jpg"
+            src="/images/career8.jpg"
             alt="Career Counselling Hero"
             fill
             className="object-cover"
@@ -250,7 +250,7 @@ const CareerCounsellingPage = () => {
 
               <div className="flex flex-wrap justify-center gap-6 mb-8">
                 {[
-                  { value: '5000+', label: 'Students Guided' },
+                  { value: '50,000+', label: 'Students Guided' },
                   { value: '95%', label: 'Success Rate' },
                   { value: '23+', label: 'Years Experience' },
                 ].map((stat, index) => (
@@ -281,10 +281,10 @@ const CareerCounsellingPage = () => {
                   <HiArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <a
-                  href="tel:+919781312020"
+                  href="tel:+918837604639"
                   className="inline-flex items-center justify-center space-x-2 px-7 py-3 bg-white/10 backdrop-blur-md border-2 border-white text-white hover:bg-white hover:text-primary-600 font-bold rounded-xl transition-all duration-300"
                 >
-                  <span className="text-lg">Call: +91 9781312020</span>
+                  <span className="text-lg">Call: +91 8837604639</span>
                 </a>
               </motion.div>
             </motion.div>
@@ -608,7 +608,7 @@ const CareerCounsellingPage = () => {
                 ))}
               </div>
               <div className="text-left">
-                <p className="text-white font-bold">Join 5000+ Students</p>
+                <p className="text-white font-bold">Join 50,000+ Students</p>
                 <p className="text-white/80 text-sm">Who found their perfect career path</p>
               </div>
             </div>

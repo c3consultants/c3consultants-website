@@ -12,9 +12,9 @@ const ContactInfo = () => {
     {
       icon: HiPhone,
       title: 'Phone',
-      value: '+91 9781312020',
+      value: '+91 8837604639',
       subtext: 'Mon - Sat, 9 AM - 6 PM',
-      href: 'tel:+919781312020',
+      href: 'tel:+918837604639',
       action: 'Call Now',
     },
     {
@@ -140,10 +140,10 @@ const ContactInfo = () => {
                   Schedule a one-on-one consultation at your convenience
                 </p>
                 <a
-                  href="tel:+919781312020"
+                  href="tel:+918837604639"
                   className="inline-block px-6 py-3 bg-white text-primary-600 rounded-lg font-bold hover:bg-accent-100 transition-colors text-sm"
                 >
-                  Call +91 9781312020
+                  Call +91 8837604639
                 </a>
               </div>
             </div>

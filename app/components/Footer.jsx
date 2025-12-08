@@ -15,6 +15,7 @@ const Footer = () => {
     { name: 'Awards', href: '/awards' },
     { name: 'Results', href: '/results' },
     { name: 'Contact', href: '/contact' },
+    { name: 'Gallery', href: '/gallery' },
   ];
 
   const services = [
@@ -59,8 +60,8 @@ const Footer = () => {
     {
       icon: HiPhone,
       title: 'Phone',
-      value: '+91 9781312020',
-      href: 'tel:+919781312020',
+      value: '+91 8837604639',
+      href: 'tel:+918837604639',
     },
     {
       icon: HiMail,

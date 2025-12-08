@@ -38,7 +38,7 @@ const MissionVision = () => {
       icon: HiUsers,
       title: 'Student-Centric',
       description: 'Every decision prioritizes our students\' growth and success',
-      stat: '5000+',
+      stat: '50,000+',
       statLabel: 'Students',
     },
     {

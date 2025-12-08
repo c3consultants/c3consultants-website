@@ -72,7 +72,7 @@ const AboutHero = () => {
           >
             {[
               { number: '23+', label: 'Years' },
-              { number: '5000+', label: 'Students' },
+              { number: '50,000+', label: 'Students' },
               { number: '95%', label: 'Success' },
             ].map((stat, i) => (
               <div key={i} className="text-center">

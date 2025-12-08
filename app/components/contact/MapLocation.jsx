@@ -81,10 +81,10 @@ const MapLocation = () => {
                 <HiPhone className="w-8 h-8 text-primary-600 mb-4" />
                 <h3 className="text-lg font-bold text-primary-900 mb-3">Call Us</h3>
                 <a
-                  href="tel:+919781312020"
+                  href="tel:+918837604639"
                   className="text-base font-bold text-primary-600 hover:text-primary-700 transition-colors block mb-2 break-all"
                 >
-                 9781312020
+                 8837604639
                 </a>
                 <p className="text-neutral-600 text-xs">
                   Available Mon - Sat<br />9:00 AM - 6:00 PM
