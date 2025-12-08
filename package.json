@@ -14,7 +14,7 @@
   "homepage": "https://c3consultants.in",
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourusername/c3consultants"
+    "url": "https://github.com/c3consultants/c3consultants-website"
   },
   "private": true,
   "scripts": {
@@ -25,7 +25,7 @@
   },
   "dependencies": {
     "framer-motion": "^12.23.24",
-    "next": "16.0.0",
+    "next": "16.0.7",
     "react": "^19.0.0",
     "react-countup": "^6.5.3",
     "react-dom": "^19.0.0",
@@ -39,7 +39,7 @@
     "autoprefixer": "^10.4.21",
     "baseline-browser-mapping": "^2.9.5",
     "eslint": "^9",
-    "eslint-config-next": "16.0.0",
+    "eslint-config-next": "16.0.7",
     "postcss": "^8.5.6",
     "tailwindcss": "^3.4.18"
   }
